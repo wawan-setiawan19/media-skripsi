@@ -1,0 +1,148 @@
+@font-face{
+    font-family: Condensed;
+    src: url(../assets/font/Roboto-Condensed.ttf);
+}
+
+@font-face{
+    font-family: Goldman;
+    src: url(../assets/font/Goldman-Bold.ttf);
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: Condensed;
+}
+
+.gradient{
+    background: #c90202;
+    background: linear-gradient(51deg, rgba(201,2,2,1) 0%, #00aeef 100%); 
+}
+
+.goldman{
+    font-family: Goldman,Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.bottom-navigation{
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    overflow-x: auto;
+    width: 100%;
+    height: 55px;
+    z-index: 999;
+}
+
+.bottom-navigation .nav-link{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    flex-grow: 1;
+    min-width: 50px;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+.bottom-navigation .nav-icon{
+    font-size: 18px;
+    line-height: 35px;
+}
+
+.bottom-navigation .nav-text{
+    margin-top: -20px;
+}
+
+@media screen and (min-width:993px){
+    .bottom-navigation{
+        display: none;
+    }
+}
+
+@media screen and (max-width:992px){
+    .top-navigation{
+        display: none;
+    }
+}
+
+@media screen and (max-width:600px){
+    .char{
+        position: relative;
+        top: -40vh;
+        z-index: 0;
+        width: 90%;
+    }
+
+    .banner{
+        height: 100vh;
+    }
+
+    .banner .container{
+        padding-top: 80%;
+    }
+
+    .greeting{
+        position: relative;
+        z-index: 1;
+        text-shadow: 0 0 20px;
+    }
+
+    footer{
+        display: none;
+    }
+
+    .container{
+        margin-bottom: 60px;
+    }
+}
+
+.text-change-container{
+        padding-left: 20px;
+    }
+
+.char{
+    clip-path: circle(80% at 40% 15%);
+}
+
+.banner{
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.cta{
+    margin-bottom: 20px;
+    border-radius: 30px;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+}
+
+.radius{
+    border-radius: 20px;
+}
+
+.mission{
+    padding: 10px;
+    color: white;
+}
+
+.btn-second{
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+.guide-header{
+    color: white;
+}
+
+#footerNav li a{
+    color: white;
+}
