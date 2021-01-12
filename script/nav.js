@@ -19,6 +19,21 @@ const loadBotNav = () => {
     xhr.send();
 }
 
+const loadFormNav = () => {
+    const xhr = new XMLHttpRequest();
+
+    xhr.onreadystatechange = () =>{
+        if(this.readyState === 4){
+            if(this.status !== 200) return;
+        }
+
+        botNavElement.innerHTML = xhr.responseText;
+    };
+
+    xhr.open("GET", "./components/form-nav.html");
+    xhr.send();
+}
+
 const loadTopNav = () =>{
     const xhr = new XMLHttpRequest();
 
@@ -38,13 +53,13 @@ const loadPage = (page) =>{
     const xmlHttp = new XMLHttpRequest();
 
     xmlHttp.onreadystatechange = () => {
-            if(xmlHttp.readyState == 4){
+            if(xmlHttp.readyState === 4){
                 const content = document.querySelector("#body-content");
-                if(xmlHttp.status == 200){
+                if(xmlHttp.status === 200){
                     content.innerHTML= xmlHttp.responseText;
-                    if (page == "home") loadHome();
+                    if (page === "home") loadHome();
                     M.AutoInit();
-                }else if(xmlHttp.status == 404){
+                }else if(xmlHttp.status === 404){
                     content.innerHTML = `<p>Halaman tidak ada</p>`;
                 }else{
                     content.innerHTML = `<p>Ups.. halaman tidak dapat diakses</p>`;
@@ -67,12 +82,17 @@ const loadHome = () =>{
 }
 
 const loadToast = (page) =>{
-    M.toast({html: `${page}`, outDuration:100, classes:'teal'});
+    M.toast({html: `${page}`, outDuration:100, classes:'gradient'});
     setTimeout(() => {
         M.Toast.dismissAll();
     }, 1500);
 }
 
-loadBotNav();
-loadTopNav();
-loadPage(page);
+if(apiToken !== ""){
+    loadPage(page);
+    loadBotNav();
+    loadTopNav();
+}else{
+    loadPage("form");
+    loadFormNav();
+}

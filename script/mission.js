@@ -11,12 +11,12 @@ const getNewMission = () =>{
                 dataMisi += `
                 <div class="col s12 m6 l3">
                     <div class="card center gradient mission radius">
-                        <h6 class="goldman truncate">${data[i].nama_misi}</h6>
-                        <p class="left-align truncate">${data[i].deskripsi}</p>
-                        <a href="" class="btn waves-effect btn-second radius">Lihat Misi</a>
+                        <div class="goldman truncate">${data[i].nama_misi}
+                        </div>
+                        <a href="" class="btn waves-effect btn-second radius">Cek Misi</a>
                     </div>
                 </div>
-                `;
+                        `;
             }
         }
         document.querySelector("#mission").innerHTML = dataMisi;
