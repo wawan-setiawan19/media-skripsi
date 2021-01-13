@@ -1,0 +1,41 @@
+@media screen and (max-width: 600px) {
+    .container-form {
+        margin-top: -6vh;
+    }
+
+    .container-sign-in {
+        height: 100vh;
+        padding-top: 40%;
+    }
+
+    .container-sign-up {
+        height: 100vh;
+        margin-bottom: -10px;
+    }
+}
+
+.btn-form {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+[type="radio"]:checked + span:after,
+[type="radio"].with-gap:checked + span:after {
+    background: #c90202;
+    /* background: linear-gradient(51deg, rgba(201,2,2,1) 0%, #00aeef 100%);  */
+}
+
+[type="radio"]:checked + span:after,
+[type="radio"].with-gap:checked + span:before,
+[type="radio"].with-gap:checked + span:after {
+    border: 2px solid #00aeef;
+}
+
+.form-gradient {
+    background: rgb(69, 255, 250);
+    background: linear-gradient(
+        51deg,
+        rgba(69, 255, 250, 1) 0%,
+        rgba(216, 255, 112, 1) 50%,
+        rgba(255, 255, 255, 1) 100%
+    );
+}

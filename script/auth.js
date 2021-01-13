@@ -1,1 +1,55 @@
-let apiToken = "";
+const baseUrl = "http://127.0.0.1:8000/api/";
+let inputJK = "Laki-laki";
+let jk = value =>{
+    inputJK = value;
+}
+
+const getSignUp = () =>{
+    const btnSignUp = document.querySelector("#btnSignUp");
+    const inputNis = document.querySelector("#nis");
+    const inputNama = document.querySelector("#nama_lengkap");
+    const inputKelas = document.querySelector("#kelas");
+    const inputPassword = document.querySelector("#password");
+
+
+    btnSignUp.addEventListener("click", ()=>{
+    let data = {
+        nis : inputNis.value,
+        name : inputNama.value,
+        kelas : inputKelas.value,
+        jenis_kelamin : inputJK,
+        password : inputPassword.value
+    }
+    
+        fetch(`${baseUrl}register`,{
+            method: 'POST',
+            mode: 'cors', 
+            cache: 'no-cache',
+            credentials: 'same-origin',
+            headers: {
+            'Content-Type': 'application/json',
+            'Accept':'application/json'
+            },
+            redirect: 'follow',
+            referrerPolicy: 'no-referrer',
+            body: JSON.stringify(data)
+        })
+        .then(response => response.json())
+        .then(data => {
+            const error = data.errors;
+            if(error){
+                for (const key in error) {
+                    console.log(error[key][0]);
+                    M.toast({html:error[key][0]});
+                }
+            }else{
+                M.toast({html:'Yeaay selamat kamu berhasil menjadi agen SIA'});
+                inputNis.value = '';
+                inputNama.value = '';
+                inputPassword.value = '';
+                inputKelas.value = '';
+            }
+            
+        })
+    })
+}

@@ -1,5 +1,6 @@
 const botNavElement = document.querySelector("#bottomNav");
 const topNavElement = document.querySelector("#topNav");
+let apiToken = "";
 
 let page = location.hash.substr(1);
 if(page == "") page = "home";
@@ -58,6 +59,7 @@ const loadPage = (page) =>{
                 if(xmlHttp.status === 200){
                     content.innerHTML= xmlHttp.responseText;
                     if (page === "home") loadHome();
+                    if (page === "form") getSignUp();
                     M.AutoInit();
                 }else if(xmlHttp.status === 404){
                     content.innerHTML = `<p>Halaman tidak ada</p>`;
@@ -96,3 +98,5 @@ if(apiToken !== ""){
     loadPage("form");
     loadFormNav();
 }
+
+
