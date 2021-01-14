@@ -1,5 +1,6 @@
 const botNavElement = document.querySelector("#bottomNav");
 const topNavElement = document.querySelector("#topNav");
+const bodyElement = document.querySelector("#main");
 let apiToken = "";
 
 let page = location.hash.substr(1);
@@ -59,7 +60,8 @@ const loadPage = (page) =>{
                 if(xmlHttp.status === 200){
                     content.innerHTML= xmlHttp.responseText;
                     if (page === "home") loadHome();
-                    if (page === "form") getSignUp();
+                    if (page === "profile") loadProfile();
+                    if (page === "form") loadForm();
                     M.AutoInit();
                 }else if(xmlHttp.status === 404){
                     content.innerHTML = `<p>Halaman tidak ada</p>`;
@@ -83,6 +85,15 @@ const loadHome = () =>{
     loadScramble();
 }
 
+const loadProfile = ()=>{
+    getLogout();
+}
+
+const loadForm = () =>{
+    getSignUp();
+    getLogin();
+}
+
 const loadToast = (page) =>{
     M.toast({html: `${page}`, outDuration:100, classes:'gradient'});
     setTimeout(() => {
@@ -94,9 +105,11 @@ if(apiToken !== ""){
     loadPage(page);
     loadBotNav();
     loadTopNav();
+    bodyElement.classList.remove("body-form");
 }else{
     loadPage("form");
     loadFormNav();
+    bodyElement.classList.add("body-form");
 }
 
 

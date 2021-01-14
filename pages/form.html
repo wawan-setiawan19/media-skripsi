@@ -1,89 +1,85 @@
 <!-- FORM LOGIN -->
-<div class="container-form">
+<div class="container-sign-in" id="login">
     <div class="container">
-        <div class="container-sign-in" id="login">
-            <!-- <div class="container-sign-in-input">
-                <div class="container"> -->
-                    <h1>Masuk SIA</h1>
-                    <p>Segera masuk, ada misi yang menunggumu!!!</p>
-                    <div class="row">
-                        <div class="input-field col s12">
-                            <input id="nis_login" type="text" class="validate">
-                            <label for="nis_login">
-                                <i class="material-icons">perm_identity</i>
-                                NIS
-                            </label>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="input-field col s12">
-                            <input id="password_login" type="password" class="validate">
-                            <label for="password_login">
-                                <i class="material-icons">vpn_key</i>
-                                Password
-                            </label>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <a href="" class="btn gradient col s12 radius btn-form">KERJAKAN MISI</a>
-                    </div>
-                <!-- </div>
-            </div> -->
+        <h1>Masuk SIA</h1>
+        <p>Segera masuk, ada misi yang menunggumu!!!</p>
+        <div class="row">
+            <div class="input-field col s12">
+                <input id="nis_login" type="text" class="validate">
+                <label for="nis_login">
+                    <i class="material-icons">perm_identity</i>
+                    NIS
+                </label>
+            </div>
         </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <input id="password_login" type="password" class="validate">
+                <label for="password_login">
+                    <i class="material-icons">vpn_key</i>
+                    Password
+                </label>
+            </div>
+        </div>
+        <div class="row">
+            <btn class="btn gradient col s12 radius btn-form" id="btnLogin">KERJAKAN MISI</btn>
+        </div>
+    </div>
+</div>
 
-        <div class="container-sign-up" id="sign-up">
-            <h1>Gabung Agen</h1>
-            <p>Banyak misi penting menunggumu, ayo segera bergabung!!!</p>
-            <div class="row">
-                <div class="input-field col s12">
-                    <input id="nis" type="text" class="validate">
-                    <label for="nis">
-                        NIS
-                    </label>
-                </div>
+<div class="container-sign-up" id="sign-up">
+    <div class="container">
+        <h1>Gabung Agen</h1>
+        <p>Banyak misi penting menunggumu, ayo segera bergabung!!!</p>
+        <div class="row">
+            <div class="input-field col s12">
+                <input id="nis" type="text" class="validate">
+                <label for="nis">
+                    NIS
+                </label>
             </div>
-            <div class="row">
-                <div class="input-field col s12">
-                    <input id="nama_lengkap" type="text" class="validate">
-                    <label for="nama_lengkap">
-                        Nama Lengkap
-                    </label>
-                </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <input id="nama_lengkap" type="text" class="validate">
+                <label for="nama_lengkap">
+                    Nama Lengkap
+                </label>
             </div>
-            <div class="row">
-                <div class="input-field col s12">
-                    <select id="kelas">
-                        <option value="" disabled selected>Pilih Kelas</option>
-                        <option value="X-RPL 1">X-RPL 1</option>
-                        <option value="X-RPL 2">X-RPL 2</option>
-                        <option value="X-RPL 3">X-RPL 3</option>
-                    </select>
-                    <label>Kelas</label>
-                </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <select id="kelas">
+                    <option value="" disabled selected>Pilih Kelas</option>
+                    <option value="X-RPL 1">X-RPL 1</option>
+                    <option value="X-RPL 2">X-RPL 2</option>
+                    <option value="X-RPL 3">X-RPL 3</option>
+                </select>
+                <label>Kelas</label>
             </div>
-            <div class="row">
-                <div class="col s12">
-                    <label>
-                        <input class="with-gap" name="jenis-kelamin" type="radio" onclick="jk('Laki-laki')" checked />
-                        <span>Laki-laki</span>
-                    </label>
-                    <label>
-                        <input class="with-gap" name="jenis-kelamin" type="radio" onclick="jk('Perempuan')" />
-                        <span>Perempuan</span>
-                    </label>
-                </div>
+        </div>
+        <div class="row">
+            <div class="col s12">
+                <label>
+                    <input class="with-gap" name="jenis-kelamin" type="radio" onclick="jk('Laki-laki')" checked />
+                    <span>Laki-laki</span>
+                </label>
+                <label>
+                    <input class="with-gap" name="jenis-kelamin" type="radio" onclick="jk('Perempuan')" />
+                    <span>Perempuan</span>
+                </label>
             </div>
-            <div class="row">
-                <div class="input-field col s12">
-                    <input id="password" type="password" class="validate">
-                    <label for="password">
-                        Password
-                    </label>
-                </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <input id="password" type="password" class="validate">
+                <label for="password">
+                    Password
+                </label>
             </div>
-            <div class="row">
-                <btn class="btn gradient col s12 radius btn-form" id="btnSignUp">GABUNG SIA</btn>
-            </div>
+        </div>
+        <div class="row">
+            <btn class="btn gradient col s12 radius btn-form" id="btnSignUp">GABUNG SIA</btn>
         </div>
     </div>
 </div>

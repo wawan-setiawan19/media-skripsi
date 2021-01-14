@@ -1,16 +1,17 @@
 @media screen and (max-width: 600px) {
-    .container-form {
-        margin-top: -6vh;
-    }
-
     .container-sign-in {
         height: 100vh;
-        padding-top: 40%;
+        padding-top: 30%;
     }
 
     .container-sign-up {
         height: 100vh;
         margin-bottom: -10px;
+    }
+
+    .body-form{
+        height: 100vh;
+        overflow: hidden;
     }
 }
 
@@ -21,7 +22,6 @@
 [type="radio"]:checked + span:after,
 [type="radio"].with-gap:checked + span:after {
     background: #c90202;
-    /* background: linear-gradient(51deg, rgba(201,2,2,1) 0%, #00aeef 100%);  */
 }
 
 [type="radio"]:checked + span:after,

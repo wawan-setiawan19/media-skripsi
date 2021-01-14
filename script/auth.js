@@ -48,8 +48,61 @@ const getSignUp = () =>{
                 inputNama.value = '';
                 inputPassword.value = '';
                 inputKelas.value = '';
+                window.location.replace("http://localhost:5500/#login");
             }
-            
         })
+    })
+}
+
+const getLogin = ()=>{
+    const btnLogin = document.querySelector("#btnLogin");
+    const inputNis = document.querySelector("#nis_login");
+    const inputPassword = document.querySelector("#password_login");
+
+    btnLogin.addEventListener("click",()=>{
+        let data = {
+            nis:inputNis.value,
+            password:inputPassword.value
+        }
+
+        fetch(`${baseUrl}login`,{
+            method: 'POST',
+            mode: 'cors', 
+            cache: 'no-cache',
+            credentials: 'same-origin',
+            headers: {
+            'Content-Type': 'application/json',
+            'Accept':'application/json'
+            },
+            redirect: 'follow',
+            referrerPolicy: 'no-referrer',
+            body: JSON.stringify(data)
+        })
+        .then(response => response.json())
+        .then(data => {
+            const errors = data.error;
+            if(errors){
+                M.toast({html:errors});
+            }else{
+                M.toast({html:'Selamat Menjalankan misi agen'});
+                apiToken = data.meta.token;
+                loadPage('home');
+                loadBotNav();
+                loadTopNav();
+                bodyElement.classList.remove("body-form");
+            }
+        })
+    })
+}
+
+const getLogout = ()=>{
+    const btnLogout = document.querySelector("#btnLogout");
+
+    btnLogout.addEventListener("click",()=>{
+        apiToken='';
+        M.toast({html:'sampai bertemu lagi agen!!'})
+        loadPage('form');
+        loadFormNav();
+        bodyElement.classList.add("body-form");
     })
 }
