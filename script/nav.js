@@ -28,8 +28,8 @@ const loadFormNav = () => {
         if(this.readyState === 4){
             if(this.status !== 200) return;
         }
-
         botNavElement.innerHTML = xhr.responseText;
+        topNavElement.innerHTML = xhr.responseText;
     };
 
     xhr.open("GET", "./components/form-nav.html");
@@ -100,16 +100,3 @@ const loadToast = (page) =>{
         M.Toast.dismissAll();
     }, 1500);
 }
-
-if(apiToken !== ""){
-    loadPage(page);
-    loadBotNav();
-    loadTopNav();
-    bodyElement.classList.remove("body-form");
-}else{
-    loadPage("form");
-    loadFormNav();
-    bodyElement.classList.add("body-form");
-}
-
-

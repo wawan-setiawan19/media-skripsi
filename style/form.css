@@ -9,10 +9,11 @@
         margin-bottom: -10px;
     }
 
-    .body-form{
-        height: 100vh;
-        overflow: hidden;
-    }
+}
+
+.body-form{
+    height: 100vh;
+    overflow: hidden;
 }
 
 .btn-form {
@@ -38,4 +39,20 @@
         rgba(216, 255, 112, 1) 50%,
         rgba(255, 255, 255, 1) 100%
     );
+}
+@media screen and (min-width:1024px){
+    .container-sign-in{
+        height: 100vh;
+        padding: 10%;
+    }
+    
+    .container-sign-up{
+        padding: 5% 20% 0 20%;
+        height: 100vh;
+    }
+
+    .container-sign-in h1,
+    .container-sign-up h1{
+        text-align: center;
+    }
 }
