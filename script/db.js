@@ -1,4 +1,4 @@
-let id;
+let id,nama = "Nama Agen",kelas="Kelas", jenkel = 'L';
 let dbPromised = idb.open("users", 1, function (upgradeDb) {
     let usersObjectStore = upgradeDb.createObjectStore("apiToken", {
         keyPath: "id",
@@ -16,6 +16,9 @@ function saveUser(user) {
         })
         .then(() => {
             console.log("Kompetisi berhasil tersimpan");
+            page = "home";
+            window.location.replace("http://localhost:5500/#home");
+            cek();
         });
 }
 
@@ -53,7 +56,6 @@ function deleteUser(id) {
         .then(function (db) {
             var tx = db.transaction("apiToken", "readwrite");
             var store = tx.objectStore("apiToken");
-            store.getAll().then(data=>console.log(data));
             store.delete(id);
             return tx.complete;
         })
@@ -62,17 +64,19 @@ function deleteUser(id) {
         });
 }
 
-getAll().then((users) => {
-    if (users.length < 1) {
-        loadPage("form");
-        loadFormNav();
-        bodyElement.classList.add("body-form");
-    } else {
-        me(users[0].token);
-        id = users[0].id;
-        loadPage(page);
-        loadBotNav();
-        loadTopNav();
-        bodyElement.classList.remove("body-form");
-    }
-});
+const cek = () => {
+    getAll().then((users) => {
+        if (users.length < 1) {
+            loadPage("form");
+            loadFormNav();
+            bodyElement.classList.add("body-form");
+        } else {
+            me(users[0].token);
+            id = users[0].id;
+            loadPage(page);
+            loadBotNav();
+            loadTopNav();
+            bodyElement.classList.remove("body-form");
+        }
+    });
+};

@@ -86,6 +86,7 @@ const loadHome = () =>{
 }
 
 const loadProfile = ()=>{
+    getProfile();
     getLogout();
 }
 

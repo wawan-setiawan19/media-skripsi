@@ -1,5 +1,5 @@
 const baseUrl = "http://127.0.0.1:8000/api/";
-let inputJK = "Laki-laki";
+let inputJK = "L";
 let jk = (value) => {
     inputJK = value;
 };
@@ -21,6 +21,10 @@ const getSignUp = () => {
         };
 
         signup(data);
+        inputNis.value = "";
+        inputNama.value = "";
+        inputPassword.value = "";
+        inputKelas.value = "";
     });
 };
 
@@ -34,7 +38,6 @@ const getLogin = () => {
             nis: inputNis.value,
             password: inputPassword.value,
         };
-
         login(data);
     });
 };
@@ -76,9 +79,6 @@ const login = (data) => {
                 apiToken = data.meta.token;
                 id = data.meta.id;
                 saveUser(data);
-                loadPage("home");
-                loadBotNav();
-                loadTopNav();
                 bodyElement.classList.remove("body-form");
             }
         });
@@ -110,10 +110,6 @@ const signup = (data) => {
                 M.toast({
                     html: "Yeaay selamat kamu berhasil menjadi agen SIA",
                 });
-                inputNis.value = "";
-                inputNama.value = "";
-                inputPassword.value = "";
-                inputKelas.value = "";
                 window.location.replace("http://localhost:5500/#login");
             }
         });
@@ -123,6 +119,13 @@ const me = data =>{
     fetch(`${baseUrl}me?api_token=${data}`)
     .then(response=>response.json())
     .then(result=>{
-        // console.log(result);
+        nama = result.data.name;
+        kelas = result.data.kelas;
+        jenkel = result.data.jenis_kelamin;
+        if(page === "profile"){
+            getProfile();
+        }
     })
 }
+
+cek();

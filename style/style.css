@@ -154,11 +154,7 @@ body{
 }
 
 @media screen and (max-width:600px){
-    .picture-container{
-        padding: 20% 0 5% 0;
+    .picture-container .row{
+        padding: 5% 0;
     }
-}
-
-.picture-container{
-    padding-top: 10%;
 }
