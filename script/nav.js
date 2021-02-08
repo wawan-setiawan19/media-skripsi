@@ -2,8 +2,10 @@ const botNavElement = document.querySelector("#bottomNav");
 const topNavElement = document.querySelector("#topNav");
 const bodyElement = document.querySelector("#main");
 let apiToken = "";
+let getUrl = location.hash.substr(1).split("/"); 
+let page = getUrl[0];
+// let page = location.hash.substr(1);
 
-let page = location.hash.substr(1);
 if(page == "") page = "home";
 
 const loadBotNav = () => {
@@ -59,12 +61,16 @@ const loadPage = (page) =>{
                 const content = document.querySelector("#body-content");
                 if(xmlHttp.status === 200){
                     content.innerHTML= xmlHttp.responseText;
+                    console.log(page);
                     if (page === "home") loadHome();
                     if (page === "profile") loadProfile();
                     if (page === "form") loadForm();
+                    if (page === "detail-misi") cekMisi();
+                    if (page === "test-vak") getTest();
                     M.AutoInit();
                 }else if(xmlHttp.status === 404){
-                    content.innerHTML = `<p>Halaman tidak ada</p>`;
+                    loadPage('404');
+                    content.innerHTML = xmlHttp.responseText;
                 }else{
                     content.innerHTML = `<p>Ups.. halaman tidak dapat diakses</p>`;
                 }

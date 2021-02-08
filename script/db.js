@@ -1,35 +1,46 @@
-let id,nama = "Nama Agen",kelas="Kelas", jenkel = 'L';
+let id,
+    nama = "Nama Agen",
+    kelas = "Kelas",
+    jenkel = "L",
+    vak;
 let dbPromised = idb.open("users", 1, function (upgradeDb) {
-    let usersObjectStore = upgradeDb.createObjectStore("apiToken", {
+    let apiObjectStore = upgradeDb.createObjectStore("apiToken", {
         keyPath: "id",
     });
-    usersObjectStore.createIndex("token", "token", { unique: false });
+    let userObjectStore = upgradeDb.createObjectStore("userData", {
+        keyPath: "id",
+    });
+
+    userObjectStore.createIndex("user", "user", { unique: false });
+    apiObjectStore.createIndex("token", "token", { unique: false });
 });
 
 function saveUser(user) {
     dbPromised
         .then((db) => {
-            const tx = db.transaction("apiToken", "readwrite");
-            const store = tx.objectStore("apiToken");
-            store.put(user.meta);
-            return tx.complete;
+            const txMeta = db.transaction("apiToken", "readwrite");
+            const txData = db.transaction("userData", "readwrite");
+            const metaData = txMeta.objectStore("apiToken");
+            const userData = txData.objectStore("userData");
+            metaData.put(user.meta);
+            userData.put(user.data);
+            return txMeta.complete, txData.complete;
         })
         .then(() => {
-            console.log("Kompetisi berhasil tersimpan");
             page = "home";
-            window.location.replace("http://localhost:5500/#home");
+            loadPage("home");
             cek();
         });
 }
 
-function getById(nis) {
+function getById(id) {
     return new Promise((resolve, reject) => {
         dbPromised
             .then((db) => {
-                const tx = db.transaction("apiToken", "readonly");
-                const store = tx.objectStore("apiToken");
+                const tx = db.transaction("userData", "readonly");
+                const store = tx.objectStore("userData");
 
-                return store.get(nis);
+                return store.get(id);
             })
             .then((user) => {
                 resolve(user);
@@ -78,5 +89,8 @@ const cek = () => {
             loadTopNav();
             bodyElement.classList.remove("body-form");
         }
+    });
+    getById(20).then(users=>{
+        vak = users.gaya_belajar;
     });
 };

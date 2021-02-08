@@ -1,0 +1,57 @@
+<style>
+    .determinate{
+        border-radius: 20px;
+    }
+
+    .progress{
+        height: 2vh;
+        margin-top: 20px;
+        border-radius: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .progress-soal{
+        border-radius: 20px;
+        color: white;
+    }
+
+    .nomor-soal{
+        background-color: grey;
+        border-radius: 50%;
+        color: white;
+    }
+
+    .pertanyaan{
+        height: 30vh;
+        font-size: 32px;
+    }
+
+    .choices{
+        margin: 5px 0;
+        line-height: 30px;
+        border-radius: 20px;
+        color: white;
+        font-size: 20px;
+    }
+
+    .btn-navigasi{
+        color: white;
+        font-size: 18px;
+        border-radius: 20px;
+        text-align: center;
+    }
+</style>
+<div class="container">
+    <div class="progress">
+        <div class="determinate gradient" id="progressBar"></div>
+    </div>
+    <div class="row">
+        <div class="col s12 center-align progress-soal gradient">1/10</div>
+    </div>
+    <div class="row" id="containerSoal">
+        <div class="col s12 pertanyaan">Contoh Soal</div>
+        <div class="col s12 m6 choices gradient" id="pilihan1" onclick="addVisual()">Pilihan 1</div>
+        <div class="col s12 m6 choices gradient" id="pilihan2" onclick="addAudio()">Pilihan 2</div>
+        <div class="col s12 m6 choices gradient" id="pilihan3" onclick="addKinestetik()">Pilihan 3</div>
+    </div>
+</div>
