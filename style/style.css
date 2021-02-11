@@ -35,8 +35,7 @@ body{
     bottom: 0;
     display: flex;
     overflow-x: auto;
-    width: 100%;
-    height: 55px;
+    height: 65px;
     z-index: 999;
     background-color: var(--background-color);
 }
@@ -84,25 +83,8 @@ body{
 }
 
 @media screen and (max-width:600px){
-    .char{
-        position: relative;
-        top: -40vh;
-        z-index: 0;
-        width: 90%;
-    }
-
     .banner{
         height: 100vh;
-    }
-
-    .banner .container{
-        padding: 80% 5% 0 5%;
-    }
-
-    .greeting{
-        position: relative;
-        z-index: 1;
-        text-shadow: 0 0 20px;
     }
 
     footer{
@@ -169,12 +151,12 @@ body{
 
 @media screen and (max-width:600px){
     .picture-container .row{
-        padding: 5% 0;
+        padding: 2% 0;
     }
 }
 
 .picture-container{
-    padding: 10% 0 5% 0;
+    padding-top: 10%;
     background-color: var(--background-color);
 }
 
@@ -185,5 +167,7 @@ body{
 }
 
 .not-found-banner{
-    padding-top: 20vh;
+    padding-top: 10vh;
+    height: 100vh;
+    overflow: hidden;
 }
