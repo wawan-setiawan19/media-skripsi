@@ -3,6 +3,7 @@ let id,
     kelas = "Kelas",
     jenkel = "L",
     vak;
+
 let dbPromised = idb.open("users", 1, function (upgradeDb) {
     let apiObjectStore = upgradeDb.createObjectStore("apiToken", {
         keyPath: "id",
@@ -90,7 +91,7 @@ const cek = () => {
             bodyElement.classList.remove("body-form");
         }
     });
-    getById(20).then(users=>{
+    getById(20).then((users) => {
         vak = users.gaya_belajar;
     });
 };

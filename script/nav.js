@@ -61,7 +61,6 @@ const loadPage = (page) =>{
                 const content = document.querySelector("#body-content");
                 if(xmlHttp.status === 200){
                     content.innerHTML= xmlHttp.responseText;
-                    console.log(page);
                     if (page === "home") loadHome();
                     if (page === "profile") loadProfile();
                     if (page === "form") loadForm();

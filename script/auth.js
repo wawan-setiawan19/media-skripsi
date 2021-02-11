@@ -80,6 +80,7 @@ const login = (data) => {
                 id = data.meta.id;
                 saveUser(data);
                 bodyElement.classList.remove("body-form");
+                
             }
         });
 };
