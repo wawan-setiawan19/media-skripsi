@@ -1,4 +1,4 @@
-    const baseUrl = "http://127.0.0.1:8000/api/";
+const baseUrl = "http://127.0.0.1:8000/api/";
 let inputJK = "L";
 let jk = (value) => {
     inputJK = value;
@@ -80,7 +80,6 @@ const login = (data) => {
                 id = data.meta.id;
                 saveUser(data);
                 bodyElement.classList.remove("body-form");
-                
             }
         });
 };
@@ -123,6 +122,7 @@ const me = (data) => {
             nama = result.data.name;
             kelas = result.data.kelas;
             jenkel = result.data.jenis_kelamin;
+            vak = result.data.gaya_belajar;
             if (page === "profile") {
                 getProfile();
             }

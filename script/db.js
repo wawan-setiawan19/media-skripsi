@@ -84,14 +84,10 @@ const cek = () => {
             bodyElement.classList.add("body-form");
         } else {
             me(users[0].token);
-            id = users[0].id;
             loadPage(page);
             loadBotNav();
             loadTopNav();
             bodyElement.classList.remove("body-form");
         }
-    });
-    getById(20).then((users) => {
-        vak = users.gaya_belajar;
     });
 };

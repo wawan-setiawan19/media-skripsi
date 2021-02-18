@@ -8,7 +8,7 @@ const getTest = () => {
     choices.forEach((element) => {
         element.addEventListener("click", () => {
             currentSoal++;
-            if (currentSoal <= 2) {
+            if (currentSoal <= 10) {
                 tampil(currentSoal);
             }
             getSoal(currentSoal);
@@ -31,7 +31,7 @@ const getSoal = (nomorSoal) => {
     const pilihan1 = document.querySelector("#pilihan1");
     const pilihan2 = document.querySelector("#pilihan2");
     const pilihan3 = document.querySelector("#pilihan3");
-    if (nomorSoal > 2) {
+    if (nomorSoal > 10) {
         pilihan1.setAttribute("class", "hide");
         pilihan2.setAttribute("class", "hide");
         pilihan3.setAttribute("class", "hide");
@@ -39,7 +39,7 @@ const getSoal = (nomorSoal) => {
         audio=${audio} <br>
         kinestetik=${kinestetik} <br>`;
     } else {
-        fetch(`${baseUrl}soal_vakbyID/${nomorSoal}`)
+        fetch(`${baseUrl}soal_VAK/${nomorSoal}`)
             .then((response) => response.json())
             .then((result) => {
                 soal.innerHTML = result[nomorSoal - 1].soal;
