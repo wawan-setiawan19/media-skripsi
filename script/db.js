@@ -2,7 +2,7 @@ let id,
     nama = "Nama Agen",
     kelas = "Kelas",
     jenkel = "L",
-    vak;
+    // vak = ;
 
 let dbPromised = idb.open("users", 1, function (upgradeDb) {
     let apiObjectStore = upgradeDb.createObjectStore("apiToken", {
@@ -83,6 +83,7 @@ const cek = () => {
             loadFormNav();
             bodyElement.classList.add("body-form");
         } else {
+            id = users[0].id;
             me(users[0].token);
             loadPage(page);
             loadBotNav();

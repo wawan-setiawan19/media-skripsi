@@ -126,6 +126,7 @@ const me = (data) => {
             if (page === "profile") {
                 getProfile();
             }
+            if (vak == 0) loadPage("test-vak");
         });
 };
 

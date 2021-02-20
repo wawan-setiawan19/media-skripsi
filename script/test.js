@@ -8,9 +8,7 @@ const getTest = () => {
     choices.forEach((element) => {
         element.addEventListener("click", () => {
             currentSoal++;
-            if (currentSoal <= 10) {
-                tampil(currentSoal);
-            }
+            tampil(currentSoal);
             getSoal(currentSoal);
         });
     });
@@ -21,9 +19,13 @@ const getTest = () => {
 
 const tampil = (progress) => {
     const progressBar = document.querySelector("#progressBar");
-    const progressSoal = document.querySelector(".progress-soal");
-    progressSoal.innerHTML = `${progress}/10`;
-    progressBar.style.width = `${(progress / 10) * 100}%`;
+    if (progress <= 10) {
+        progressBar.innerHTML = `${progress}/10`;
+        progressBar.style.width = `${(progress / 10) * 100}%`;
+    } else {
+        progressBar.innerHTML = `Test Selesai`;
+        progressBar.style.width = `100%`;
+    }
 };
 
 const getSoal = (nomorSoal) => {
@@ -31,13 +33,14 @@ const getSoal = (nomorSoal) => {
     const pilihan1 = document.querySelector("#pilihan1");
     const pilihan2 = document.querySelector("#pilihan2");
     const pilihan3 = document.querySelector("#pilihan3");
+    const result = document.querySelector(".result");
     if (nomorSoal > 10) {
-        pilihan1.setAttribute("class", "hide");
-        pilihan2.setAttribute("class", "hide");
-        pilihan3.setAttribute("class", "hide");
-        soal.innerHTML = `visual=${visual} <br>
-        audio=${audio} <br>
-        kinestetik=${kinestetik} <br>`;
+        pilihan1.classList.add("hide");
+        pilihan2.classList.add("hide");
+        pilihan3.classList.add("hide");
+        soal.classList.add("hide");
+        result.classList.remove("hide");
+        cekHasil();
     } else {
         fetch(`${baseUrl}soal_VAK/${nomorSoal}`)
             .then((response) => response.json())
@@ -59,3 +62,26 @@ const addAudio = () => {
 const addKinestetik = () => {
     kinestetik++;
 };
+
+const cekHasil = ()=>{
+    let hasil_Akhir = '';
+    const hasil = document.querySelector(".hasil");
+    if(visual>audio){
+        if(visual>=kinestetik){
+            hasil_Akhir = 'Visual';
+        }else{
+            hasil_Akhir = 'Kinestetik'
+        }
+    }else if(audio>=kinestetik){
+        hasil_Akhir = 'Audio';
+    }else{
+        hasil_Akhir = 'Kinestetik';
+    }
+    hasil.innerHTML = hasil_Akhir;
+    let data = {
+        gaya_belajar:hasil_Akhir
+    }
+    vak = hasil_Akhir;
+    updateGayaBelajar(data,id);
+    loadPage(page);
+}

@@ -1,37 +1,29 @@
 <style>
-    @media screen and (min-width:1200px) {
-        .quiz-container{
+    @media screen and (min-width: 1200px) {
+        .quiz-container {
             padding: 120px;
         }
     }
-    .determinate{
+    .determinate {
         border-radius: 20px;
+        padding: 4px;
     }
 
-    .progress{
-        height: 2vh;
+    .progress {
+        color: white;
+        height: 4vh;
+        text-align: center;
         margin-top: 20px;
         border-radius: 20px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     }
 
-    .progress-soal{
-        border-radius: 20px;
-        color: white;
-    }
-
-    .nomor-soal{
-        background-color: grey;
-        border-radius: 50%;
-        color: white;
-    }
-
-    .pertanyaan{
+    .pertanyaan {
         height: 30vh;
         font-size: 32px;
     }
 
-    .choices{
+    .choices {
         margin: 5px 0;
         text-align: center;
         line-height: 30px;
@@ -41,24 +33,35 @@
         cursor: pointer;
     }
 
-    .btn-navigasi{
+    .btn-navigasi {
         color: white;
         font-size: 18px;
         border-radius: 20px;
         text-align: center;
     }
+
+    .result {
+        border-radius: 30px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        font-size: 32pt;
+        color: white;
+    }
 </style>
 <div class="quiz-container">
     <div class="progress">
-        <div class="determinate gradient" id="progressBar"></div>
-    </div>
-    <div class="row">
-        <div class="col s12 center-align progress-soal gradient">1/10</div>
+        <div class="determinate gradient" id="progressBar">1/10</div>
     </div>
     <div class="row" id="containerSoal">
         <div class="col s12 pertanyaan">Contoh Soal</div>
         <div class="col s12 choices gradient" id="pilihan1" onclick="addVisual()">Pilihan 1</div>
         <div class="col s12 choices gradient" id="pilihan2" onclick="addAudio()">Pilihan 2</div>
-        <div class="col s12 choices gradient" id="pilihan3" onclick="addKinestetik()">Pilihan 3</div>
+        <div class="col s12 choices gradient" id="pilihan3" onclick="addKinestetik()">
+            Pilihan 3
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col s12 result gradient hide">Gaya Belajarmu adalah <span class="hasil">Visual</span></div>
+        </div>
     </div>
 </div>
