@@ -2,7 +2,7 @@ let id,
     nama = "Nama Agen",
     kelas = "Kelas",
     jenkel = "L",
-    // vak = ;
+    vak;
 
 let dbPromised = idb.open("users", 1, function (upgradeDb) {
     let apiObjectStore = upgradeDb.createObjectStore("apiToken", {
