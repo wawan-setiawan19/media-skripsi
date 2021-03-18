@@ -1,18 +1,18 @@
 <style>
-    .misi-container{
+    .misi-container {
         height: 15vh;
         background: var(--background-color);
         padding: 10px;
         overflow: hidden;
     }
 
-    .misi-container .container{
+    .misi-container .container {
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
 
-    .title-misi{
+    .title-misi {
         margin: 0;
         background: white;
         -webkit-background-clip: text;
@@ -20,16 +20,31 @@
         font-size: 30px;
     }
 
-    .misi-img{
+    .misi-img {
         height: 15vh;
+    }
+
+    @media screen and (min-width: 1200px) {
+        .misi-container {
+            padding-top: 10vh;
+            height: 20vh;
+        }
+        .sidenav {
+            top: 20vh;
+        }
+        .sidenav-trigger {
+            display: none;
+        }
     }
 </style>
 
-
 <div class="misi-container">
     <div class="container">
+        <a href="#" data-target="slide-out" class="sidenav-trigger"
+            ><i class="material-icons">menu</i></a
+        >
         <h1 class="title-misi">Detail Misi</h1>
-        <img src="../assets/image/misi.svg" alt="" srcset="" class="misi-img">
+        <img src="../assets/image/misi.svg" alt="" srcset="" class="misi-img" />
     </div>
 </div>
 <div class="container">
