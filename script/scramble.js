@@ -74,3 +74,5 @@ const loadScramble = () =>{
 
   next();
 }
+
+export default loadScramble;

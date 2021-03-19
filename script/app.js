@@ -1,15 +1,18 @@
-import {Navigasi} from "./nav.js";
+import {Navigasi, loadPage} from "./nav.js";
 
 document.addEventListener("DOMContentLoaded", () => {
     M.AutoInit();
-    Navigasi.loadTopNav();
-    Navigasi.loadBotNav();
     firebaseAuth.onAuthStateChanged((user) => {
         if (user) {
-            Navigasi.loadPage("home");
+            loadPage(page);
+            Navigasi.loadTopNav();
+            Navigasi.loadBotNav();
             bodyElement.classList.remove("body-form");
+            console.log(user);
+            nama = user.displayName;
+            foto = user.photoURL; 
         } else {
-            Navigasi.loadPage("form");
+            loadPage("form");
             Navigasi.loadFormNav();
             bodyElement.classList.add("body-form");
         }

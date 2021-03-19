@@ -20,3 +20,6 @@ const topNavElement = document.querySelector("#topNav");
 const bodyElement = document.querySelector("#main");
 let getUrl = location.hash.substr(1).split("/");
 let page = getUrl[0];
+
+let nama = "";
+let foto = "";

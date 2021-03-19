@@ -9,7 +9,7 @@
 }
 
 :root{
-    --gradient: -webkit-linear-gradient(-70deg,#a2facf,#64acff); 
+    --gradient: -webkit-linear-gradient(-70deg, #9d9ff8, #2160a8);
     --background-color:#040d21;
 }
 
@@ -23,7 +23,7 @@ body{
 
 .gradient{
     background: #c90202;
-    background: var(--gradient-form);
+    background: var(--gradient);
 }
 
 .goldman{
