@@ -4,13 +4,10 @@ document.addEventListener("DOMContentLoaded", () => {
     M.AutoInit();
     firebaseAuth.onAuthStateChanged((user) => {
         if (user) {
-            loadPage(page);
+            loadPage('home');
             Navigasi.loadTopNav();
             Navigasi.loadBotNav();
             bodyElement.classList.remove("body-form");
-            console.log(user);
-            nama = user.displayName;
-            foto = user.photoURL;
         } else {
             loadPage("form");
             Navigasi.loadFormNav();

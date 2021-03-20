@@ -85,6 +85,7 @@ class Form {
     const kelas = document.querySelector("#kelas");
     const password = document.querySelector("#password");
     const nama = document.querySelector("#nama_lengkap");
+    let uid = "";
     let dataUser = {
       displayName: nama.value,
       nis: nis.value,
@@ -93,9 +94,26 @@ class Form {
       password: password.value,
       jenis_kelamin: jenis_kelamin,
     };
+    firebaseAuth
+      .createUserWithEmailAndPassword(email.value, password.value)
+      .then((register) => {
+        console.log(register.user.uid);
+        uid = register.user.uid;
+        this.simpanData(uid, dataUser);
+      })
+      .catch((err) => {
+        console.error(err);
+        loadToast(err.message);
+      });
+
     e.preventDefault();
     console.log(dataUser);
-    // firebaseAuth.signUpWithEmailAndPassword();
+  };
+
+  static simpanData = (id, data) => {
+    firebaseDatabase.ref("users/" + id).set({
+      data: data,
+    });
   };
 }
 
