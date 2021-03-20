@@ -1,4 +1,4 @@
-import {Navigasi, loadPage} from "./nav.js";
+import { Navigasi, loadPage } from "./nav.js";
 
 document.addEventListener("DOMContentLoaded", () => {
     M.AutoInit();
@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
             bodyElement.classList.remove("body-form");
             console.log(user);
             nama = user.displayName;
-            foto = user.photoURL; 
+            foto = user.photoURL;
         } else {
             loadPage("form");
             Navigasi.loadFormNav();

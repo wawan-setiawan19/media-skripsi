@@ -23,3 +23,6 @@ let page = getUrl[0];
 
 let nama = "";
 let foto = "";
+let jenis_kelamin = "";
+let gaya_belajar = "";
+let kelas = "";

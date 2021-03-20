@@ -12,7 +12,7 @@ class Navigasi {
         xhr.onreadystatechange = () => {
             if (xhr.readyState === 4) {
                 // if (xhr.status !== 200) return;
-                if(xhr.status === 200){
+                if (xhr.status === 200) {
                     botNavElement.innerHTML = xhr.responseText;
                     Menu.getBottomButton();
                 }
@@ -48,13 +48,14 @@ class Navigasi {
                     Menu.getTopButton();
                 }
             }
-
         };
 
         xhr.open("GET", "./components/top-nav.html");
         xhr.send();
     };
 }
+
+if (page === "") page = "home";
 const loadPage = (page) => {
     const xmlHttp = new XMLHttpRequest();
 
