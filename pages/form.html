@@ -1,171 +1,181 @@
 <!-- FORM LOGIN -->
 <style>
-    :root {
-        --gradient-form: -webkit-linear-gradient(-70deg, #9d9ff8, #2160a8);
-        --background-color: #040d21;
-    }
-    @media screen and (max-width: 600px) {
-        .container-sign-in {
-            height: 100vh;
-            padding-top: 30px;
-        }
-
-        .container-sign-up {
-            height: 100vh;
-            margin-bottom: 10px;
-        }
-    }
-
-    h1 {
-        background: var(--gradient-form);
-        -webkit-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
-        font-weight: 900;
-        text-align: center;
-    }
-
-    p {
-        text-align: center;
-    }
-
-    .body-form {
-        height: 100vh;
-        overflow: hidden;
-    }
-
-    .btn-form {
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-        background-color: var(--background-color);
-    }
-
-    [type="radio"]:checked + span:after,
-    [type="radio"].with-gap:checked + span:after {
-        background: #c90202;
-    }
-
-    [type="radio"]:checked + span:after,
-    [type="radio"].with-gap:checked + span:before,
-    [type="radio"].with-gap:checked + span:after {
-        border: 2px solid #00aeef;
-    }
-
-    @media screen and (min-width: 1024px) {
-        .container-sign-in {
-            height: 100vh;
-            padding: 10%;
-        }
-
-        .container-sign-up {
-            padding: 5% 20% 0 20%;
-            height: 100vh;
-        }
-
-        .container-sign-in h1,
-        .container-sign-up h1 {
-            text-align: center;
-        }
+  :root {
+    --gradient-form: -webkit-linear-gradient(-70deg, #9d9ff8, #2160a8);
+    --background-color: #040d21;
+  }
+  @media screen and (max-width: 600px) {
+    .container-sign-in {
+      height: 100vh;
+      padding-top: 30px;
     }
 
     .container-sign-up {
-        overflow: auto;
+      height: 100vh;
+      margin-bottom: 10px;
+    }
+  }
+
+  h1 {
+    background: var(--gradient-form);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 900;
+    text-align: center;
+  }
+
+  p {
+    text-align: center;
+  }
+
+  .body-form {
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .btn-form {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    background-color: var(--background-color);
+  }
+
+  [type="radio"]:checked + span:after,
+  [type="radio"].with-gap:checked + span:after {
+    background: #c90202;
+  }
+
+  [type="radio"]:checked + span:after,
+  [type="radio"].with-gap:checked + span:before,
+  [type="radio"].with-gap:checked + span:after {
+    border: 2px solid #00aeef;
+  }
+
+  @media screen and (min-width: 1024px) {
+    .container-sign-in {
+      height: 100vh;
+      padding: 10%;
     }
 
-    .container-sign-up .btn-form {
-        margin-bottom: 30px;
+    .container-sign-up {
+      padding: 5% 20% 0 20%;
+      height: 100vh;
     }
+
+    .container-sign-in h1,
+    .container-sign-up h1 {
+      text-align: center;
+    }
+  }
+
+  .container-sign-up {
+    overflow: auto;
+  }
+
+  .container-sign-up .btn-form {
+    margin-bottom: 30px;
+  }
+  .field-icon {
+    position: absolute;
+    right: 20px;
+    cursor: pointer;
+  }
 </style>
 <div class="container-sign-in" id="login">
-    <div class="container">
-        <h1>Masuk SIA</h1>
-        <p>Segera masuk, ada misi yang menunggumu!!!</p>
-        <div class="row">
-            <div class="input-field col s12">
-                <input id="email_login" type="email" class="validate" />
-                <label for="email_login">
-                    <i class="material-icons">mail</i>
-                    Email
-                </label>
-            </div>
-        </div>
-        <div class="row">
-            <div class="input-field col s12">
-                <input id="password_login" type="password" class="validate" />
-                <label for="password_login">
-                    <i class="material-icons">vpn_key</i>
-                    Password
-                </label>
-            </div>
-        </div>
-        <div class="row">
-            <btn class="btn col s12 radius btn-form" id="btnLogin">KERJAKAN MISI</btn>
-        </div>
-        <p>OR</p>
-        <div class="row">
-            <btn class="btn col s12 radius btn-form" id="btnGoogle">Google Sign In</btn>
-        </div>
+  <div class="container">
+    <h1>Masuk SIA</h1>
+    <p>Segera masuk, ada misi yang menunggumu!!!</p>
+    <div class="row">
+      <div class="input-field col s12">
+        <i class="material-icons prefix">mail</i>
+        <input id="email_login" type="email" class="validate" />
+        <label for="email_login"> Email </label>
+      </div>
     </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <i class="material-icons prefix">vpn_key</i>
+        <input id="password_login" type="password" class="validate" />
+        <label for="password_login"> Password </label>
+        <span class="material-icons field-icon" id="iconPasswordLogin">visibility_off</span>
+      </div>
+    </div>
+    <div class="row">
+      <btn class="btn col s12 radius btn-form" id="btnLogin">KERJAKAN MISI</btn>
+    </div>
+    <p>OR</p>
+    <div class="row">
+      <btn class="btn col s12 radius btn-form" id="btnGoogle"
+        >Google Sign In</btn
+      >
+    </div>
+  </div>
 </div>
 
 <div class="container-sign-up" id="sign-up">
-    <div class="container">
-        <h1>Gabung Agen</h1>
-        <p>Banyak misi penting menunggumu, ayo segera bergabung!!!</p>
-        <div class="row">
-            <div class="input-field col s12">
-                <input id="nis" type="text" class="validate" />
-                <label for="nis"> NIS </label>
-            </div>
-        </div>
-        <div class="row">
-            <div class="input-field col s12">
-                <input id="nama_lengkap" type="text" class="validate" />
-                <label for="nama_lengkap"> Nama Lengkap </label>
-            </div>
-        </div>
-        <div class="row">
-            <div class="input-field col s12">
-                <input id="email" type="email" class="validate" />
-                <label for="email"> E-Mail </label>
-            </div>
-        </div>
-        <div class="row">
-            <div class="input-field col s12">
-                <select id="kelas">
-                    <option value="" disabled selected>Pilih Kelas</option>
-                    <option value="X-RPL 1">X-RPL 1</option>
-                    <option value="X-RPL 2">X-RPL 2</option>
-                    <option value="X-RPL 3">X-RPL 3</option>
-                </select>
-                <label>Kelas</label>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col s12">
-                <label>
-                    <input
-                        class="with-gap"
-                        name="jenis-kelamin"
-                        type="radio"
-                        onclick="jk('L')"
-                        checked
-                    />
-                    <span>Laki-laki</span>
-                </label>
-                <label>
-                    <input class="with-gap" name="jenis-kelamin" type="radio" onclick="jk('P')" />
-                    <span>Perempuan</span>
-                </label>
-            </div>
-        </div>
-        <div class="row">
-            <div class="input-field col s12">
-                <input id="password" type="password" class="validate" />
-                <label for="password"> Password </label>
-            </div>
-        </div>
-        <div class="row">
-            <btn class="btn col s12 radius btn-form" id="btnSignUp">GABUNG SIA</btn>
-        </div>
+  <div class="container">
+    <h1>Gabung Agen</h1>
+    <p>Banyak misi penting menunggumu, ayo segera bergabung!!!</p>
+    <div class="row">
+      <div class="input-field col s12">
+        <input id="nis" type="text" class="validate" />
+        <label for="nis"> NIS </label>
+      </div>
     </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <input id="nama_lengkap" type="text" class="validate" />
+        <label for="nama_lengkap"> Nama Lengkap </label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <input id="email" type="email" class="validate" />
+        <label for="email"> E-Mail </label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <select id="kelas">
+          <option value="" disabled selected>Pilih Kelas</option>
+          <option value="X-RPL 1">X-RPL 1</option>
+          <option value="X-RPL 2">X-RPL 2</option>
+          <option value="X-RPL 3">X-RPL 3</option>
+        </select>
+        <label>Kelas</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col s12">
+        <label>
+          <input
+            class="with-gap"
+            name="jenis-kelamin"
+            type="radio"
+            onclick="jk('L')"
+            checked
+          />
+          <span>Laki-laki</span>
+        </label>
+        <label>
+          <input
+            class="with-gap"
+            name="jenis-kelamin"
+            type="radio"
+            onclick="jk('P')"
+          />
+          <span>Perempuan</span>
+        </label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <input id="password" type="password" class="validate" />
+        <label for="password"> Password </label>
+        <span class="material-icons field-icon" id="iconPasswordSignUp">visibility_off</span>
+      </div>
+    </div>
+    <div class="row">
+      <btn class="btn col s12 radius btn-form" id="btnSignUp">GABUNG SIA</btn>
+    </div>
+  </div>
 </div>

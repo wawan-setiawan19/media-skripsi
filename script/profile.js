@@ -3,11 +3,8 @@ const getProfile = () => {
     const profilePicture = document.querySelector(".profile-picture");
     // const kelasElement = document.querySelector(".kelas");
     // const gayaBelajarElement = document.querySelector(".gaya-belajar");
-    // jenkel = jenkel.toLowerCase();
 
     nameElement.innerHTML = nama;
-    // kelasElement.innerHTML = kelas;
-    // gayaBelajarElement.innerHTML = vak;
     profilePicture.setAttribute("src", foto);
 };
 
