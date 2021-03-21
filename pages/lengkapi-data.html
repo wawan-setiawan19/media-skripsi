@@ -1,0 +1,64 @@
+<style>
+    .btn-form{
+        margin-bottom: 20px;
+    }
+</style>
+<div class="container">
+    <h1>Lengkapi Data</h1>
+    <p>Demi saling mengenal, kamu harus melengkapi data terlebih dahulu</p>
+    <div class="row">
+      <div class="input-field col s12">
+        <input id="nis" type="text" class="validate" />
+        <label for="nis"> NIS </label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <input id="nama_lengkap" type="text" class="validate" />
+        <label for="nama_lengkap"> Nama Lengkap </label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <input id="email" type="email" class="validate" />
+        <label for="email"> E-Mail </label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <select id="kelas">
+          <option value="" disabled selected>Pilih Kelas</option>
+          <option value="X-RPL 1">X-RPL 1</option>
+          <option value="X-RPL 2">X-RPL 2</option>
+          <option value="X-RPL 3">X-RPL 3</option>
+        </select>
+        <label>Kelas</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col s12">
+        <label>
+          <input
+            class="with-gap"
+            name="jenis-kelamin"
+            type="radio"
+            onclick="jk('L')"
+            checked
+          />
+          <span>Laki-laki</span>
+        </label>
+        <label>
+          <input
+            class="with-gap"
+            name="jenis-kelamin"
+            type="radio"
+            onclick="jk('P')"
+          />
+          <span>Perempuan</span>
+        </label>
+      </div>
+    </div>
+    <div class="row">
+      <btn class="btn col s12 radius btn-form" id="btnSignUp">GABUNG SIA</btn>
+    </div>
+  </div>

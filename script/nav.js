@@ -1,8 +1,11 @@
+import { isGayaBelajar } from "./app.js";
 import Form from "./form.js";
 import getAllGuides from "./guides.js";
 import Menu from "./menu.js";
+import { getAllMission } from "./mission.js";
 import { getProfile } from "./profile.js";
 import loadScramble from "./scramble.js";
+import { getTest } from "./test.js";
 
 // let page = getUrl[0];
 class Navigasi {
@@ -67,7 +70,8 @@ const loadPage = (page) => {
                 if (page === "home") loadHome();
                 if (page === "profile") loadProfile();
                 if (page === "form") Form.getButton();
-                if (page === "detail-misi") if (page === "test-vak") getTest();
+                if (page === "detail-misi");
+                if (page === "test-vak") getTest();
                 M.AutoInit();
             } else if (xmlHttp.status === 404) {
                 loadPage("404");
@@ -85,11 +89,9 @@ const loadPage = (page) => {
 const loadHome = () => {
     loadScramble();
     getAllGuides();
+    getAllMission();
+    isGayaBelajar(gaya_belajar);
 };
-
-// const loadMenu = () => {
-//     Menu.getButton();
-// };
 
 const loadProfile = () => {
     getProfile();

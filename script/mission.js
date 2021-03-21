@@ -1,10 +1,16 @@
-const getNewMission = () => {
-    let dataMisi = "";
-    fetch(`${baseUrl}new_misi/`)
-        .then((response) => response.json())
-        .then((data) => {
-            data.forEach(element=>{
-                dataMisi += `
+import {loadPage} from "./nav.js";
+const dataMisi = [
+    {
+        id: 1,
+        nama_misi: "Percabangan",
+        deskripsi:
+            "Misi ini merupakan misi level A, untuk menjalankan misi ini kamu akan dibantu oleh agen rahasia lain. semoga sukses",
+    },
+];
+const getAllMission = () => {
+    let dummy = "";
+    dataMisi.forEach((element) => {
+        dummy += `
             <div class="col s12 m6 l3">
                 <div class="card center gradient mission radius">
                     <div class="goldman truncate">${element.nama_misi}
@@ -13,13 +19,9 @@ const getNewMission = () => {
                 </div>
             </div>
             `;
-            })
-            document.querySelector("#mission").innerHTML = dataMisi;
-        });
+        // console.log(element);
+    });
+    document.querySelector("#mission").innerHTML = dummy;
 };
 
-const cekMisi = ()=>{
-    if (vak == 0) {
-        loadPage("test-vak");
-    }
-}
+export { getAllMission };
