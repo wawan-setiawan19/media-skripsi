@@ -5,6 +5,8 @@ document.addEventListener("DOMContentLoaded", () => {
         if (user) {
             uid = user.uid;
             nama = user.displayName;
+            email = user.email;
+            // console.log(user);
             Navigasi.loadTopNav();
             Navigasi.loadBotNav();
             bodyElement.classList.remove("body-form");

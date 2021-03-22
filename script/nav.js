@@ -72,6 +72,7 @@ const loadPage = (page) => {
                 if (page === "form") Form.getButton();
                 if (page === "detail-misi");
                 if (page === "test-vak") getTest();
+                if (page === 'lengkapi-data') Form.getButtonLengkapiData();
                 M.AutoInit();
             } else if (xmlHttp.status === 404) {
                 loadPage("404");
@@ -89,7 +90,7 @@ const loadPage = (page) => {
 const loadHome = () => {
     loadScramble();
     getAllGuides();
-    getAllMission();
+    // getAllMission();
     isGayaBelajar(gaya_belajar);
 };
 
