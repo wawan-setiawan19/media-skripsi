@@ -1,6 +1,57 @@
 <style>
-  .container{
-      padding: 0;
+  .misi {
+    margin-top: -10%;
+  }
+  .container {
+    padding: 0;
+  }
+  .field-icon {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+    color: white;
+  }
+  .input-field {
+    border-radius: 40px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding-top: 10px;
+    padding-left: 30px;
+    padding-right: 10%;
+    background-color: rgb(139, 209, 255);
+  }
+
+  #message-input{
+    color: white;
+  }
+  #chat {
+    position: relative;
+    height: calc(90vh - 40px);
+    width: 100%;
+  }
+
+  input{
+    border: none;
+  }
+
+  input:active{
+    border: none;
+  }
+
+  @media screen and (min-width:760px) {
+    #chat{
+      margin-top: 10%;
+      position: relative;
+      height: calc(90vh - 10px);
+    }
+  }
+
+  @media screen and (min-width:1020px) {
+    #chat{
+      height: calc(90vh - 20px);
+    }
   }
 </style>
 <div class="nav-content gradient">
@@ -16,5 +67,19 @@
 <div class="container misi">
   <div id="materi" class="col s12">Materi</div>
   <div id="lkpd" class="col s12">LKPD</div>
-  <div id="chat" class="col s12">Chat Tim</div>
+  <div id="chat" class="col s12">
+    <div class="chat-container">
+      <div class="message-container">
+        <ul id="messages"></ul>
+      </div>
+      <div class="input-field col s12">
+        <input
+          id="message-input"
+          type="text"
+          placeholder="masukkan pesan"
+        />
+        <span class="material-icons field-icon" id="btnSend">send</span>
+      </div>
+    </div>
+  </div>
 </div>
