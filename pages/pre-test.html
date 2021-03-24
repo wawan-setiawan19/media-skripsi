@@ -1,0 +1,60 @@
+<style>
+  h1 {
+    color: white;
+  }
+  .misi-container {
+    height: 15vh;
+    background: var(--background-color);
+    padding: 10px;
+    overflow: hidden;
+  }
+
+  .misi-container .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .title-misi {
+    margin: 0;
+    font-size: 30px;
+  }
+
+  .misi-img {
+    height: 15vh;
+  }
+
+  @media screen and (min-width: 1200px) {
+    .misi-container {
+      padding-top: 10vh;
+      height: 20vh;
+    }
+  }
+
+  .message {
+    color: black;
+    font-size: 30px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+
+  .angka-countdown{
+      text-align: center;
+      font-size: 50vh;
+  }
+</style>
+
+<div class="misi-container">
+  <div class="container">
+    <h1 class="title-misi">Pre Test</h1>
+    <img src="../assets/image/misi.svg" alt="" srcset="" class="misi-img" />
+  </div>
+</div>
+<div class="container">
+  <div class="box-dialog-container">
+    <div class="message">Belum ada nilai pretest ya?</div>
+    <div class="btn gradient" id="hideBtn">DAPATKAN NILAI PRE TEST</div>
+  </div>
+  <div class="countdown"></div>
+  <div class="soalContainer"></div>
+</div>
