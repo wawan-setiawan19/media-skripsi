@@ -61,8 +61,25 @@
     border-radius: 30px;
   }
 
-  pre{
+  pre {
     tab-size: 2;
+  }
+
+  .determinate {
+    border-radius: 20px;
+  }
+
+  .progress {
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    margin-top: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .choose {
+    background-color: teal;
   }
 </style>
 
@@ -79,13 +96,16 @@
   </div>
   <div class="countdown"></div>
   <div class="soalContainer hide">
+    <div class="progress">
+      <div class="determinate gradient" id="progressBar">1/10</div>
+    </div>
     <div class="col s12 pertanyaan">Contoh Soal</div>
-    <div class="col s12 choices gradient" id="pilihan1">Pilihan 1</div>
-    <div class="col s12 choices gradient" id="pilihan2">Pilihan 2</div>
-    <div class="col s12 choices gradient" id="pilihan3">Pilihan 3</div>
-    <div class="col s12 choices gradient" id="pilihan4">Pilihan 4</div>
-    <div class="col s12 choices gradient" id="pilihan5">Pilihan 5</div>
+    <div class="col s12 choices choose gradient" id="pilihan1">Pilihan 1</div>
+    <div class="col s12 choices choose gradient" id="pilihan2">Pilihan 2</div>
+    <div class="col s12 choices choose gradient" id="pilihan3">Pilihan 3</div>
+    <div class="col s12 choices choose gradient" id="pilihan4">Pilihan 4</div>
+    <div class="col s12 choices choose gradient" id="pilihan5">Pilihan 5</div>
     <div class="col s12 btn btn-next" id="next">Soal Berikutnya</div>
-    <div class="col s12 btn btn-next hide" id="selesai">Selesai</div>
   </div>
+  <div class="col s12 btn btn-next hide" id="selesai">Selesai</div>
 </div>
