@@ -220,5 +220,84 @@ const dataSoalPreTest = [
     pilihan5: "input invalid",
   },
 ];
-const dataSoalPostTest = [{}];
+const dataSoalPostTest = [
+  {
+    nomor_soal: 1,
+    soal:
+      '<div>Perhatikan program di bawah ini!</div>  <div style="background: #202020; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #cd2828; font-weight: bold">#include&lt;iostream&gt;</span><br>  <span style="color: #6ab825; font-weight: bold">using</span> <span style="color: #6ab825; font-weight: bold">namespace</span> <span style="color: #d0d0d0">std;</span><br><br><span style="color: #6ab825; font-weight: bold">int</span> <span style="color: #447fcf">main</span><span style="color: #d0d0d0">(){</span><br>	<span style="color: #6ab825; font-weight: bold">int</span> <span style="color: #d0d0d0">bilangan;</span><br>	<br>	<span style="color: #d0d0d0">cout&lt;&lt;</span> <span style="color: #ed9d13">&quot;Masukan bilangan: \n&quot;</span><span style="color: #d0d0d0">;</span><br>	<span style="color: #d0d0d0">cin</span> <span style="color: #d0d0d0">&gt;&gt;</span> <span style="color: #d0d0d0">bilangan;</span><br>	<br>	<span style="color: #6ab825; font-weight: bold">if</span><span style="color: #d0d0d0">(bilangan</span> <span style="color: #d0d0d0">%</span><span style="color: #3677a9">2</span> <span style="color: #d0d0d0">==</span> <span style="color: #3677a9">0</span><span style="color: #d0d0d0">){</span><br>		<span style="color: #d0d0d0">cout</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #d0d0d0">bilangan</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #ed9d13">&quot; Merupakan kelipatan 3\n&quot;</span><span style="color: #d0d0d0">;</span><br>	<span style="color: #d0d0d0">}</span><span style="color: #6ab825; font-weight: bold">else</span><span style="color: #d0d0d0">{</span><br>		<span style="color: #d0d0d0">cout</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #d0d0d0">bilangan</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #ed9d13">&quot; Bukan merupakan kelipatan 3\n&quot;</span><span style="color: #d0d0d0">;</span><br>	<span style="color: #d0d0d0">}</span><br>	<br>	<span style="color: #6ab825; font-weight: bold">return</span> <span style="color: #3677a9">0</span><span style="color: #d0d0d0">;</span><br><span style="color: #d0d0d0">}</span><br></pre></div><div>Program tersebut adalah program untuk mendeteksi sebuah angka kelipatan 3 atau bukan, akan tetapi program tersebut terdapat sebuah kesalahan. Pada baris ke berapa letak kesalahan program, lalu apa solusinya?</div>',
+    pilihan1: "Baris 8 solusi setelah kurung if tambahkan ;",
+    pilihan2: "Baris 6 variabel bilangan ganti nama menjadi kelipatan 3",
+    pilihan3: 'Baris 9 solusi output diganti menjadi "merupakan bilangan 2',
+    pilihan4:
+      'Baris 9 solusi output diganti menjadi cout << bilangan << "merupakan kelipatan 3" << endl;',
+    pilihan5: "Baris 8 solusi (bilangan %3 == )",
+    jawaban: "Baris 8 solusi (bilangan %3 == )",
+  },
+  {
+    nomor_soal: 2,
+    soal:
+      '<div>Perhatikan notasi algoritmik berikut!</div><div style="background: #202020; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #6ab825; font-weight: bold">if</span> <span style="color: #d0d0d0">(nilai_akhir</span> <span style="color: #d0d0d0">&lt;=</span> <span style="color: #3677a9">100</span><span style="color: #d0d0d0">){</span><br>  <span style="color: #d0d0d0">indeks</span> <span style="color: #d0d0d0">=</span>  <span style="color: #d0d0d0">A</span><br><span style="color: #d0d0d0">}</span> <span style="color: #6ab825; font-weight: bold">else</span> <span style="color: #6ab825; font-weight: bold">if</span> <span style="color: #d0d0d0">(nilai_akhir</span> <span style="color: #d0d0d0">&gt;=</span> <span style="color: #3677a9">80</span><span style="color: #d0d0d0">){</span><br>  <span style="color: #d0d0d0">indeks</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">B</span><br><span style="color: #d0d0d0">}</span><span style="color: #6ab825; font-weight: bold">else</span><span style="color: #d0d0d0">{</span><br>  <span style="color: #d0d0d0">indeks</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">C</span><br><span style="color: #d0d0d0">}</span><br></pre></div><div>Apa nilai indeks jika nilai_ulangan = 70?</div>',
+    pilihan1: "Error",
+    pilihan2: "A",
+    jawaban: "A",
+    pilihan3: "B",
+    pilihan4: "C",
+    pilihan5: "False Logical",
+  },
+  {
+    nomor_soal: 3,
+    soal:
+      "Percabangan yang memiliki alternatif instruksi dan blok kondisi yang lebih dari 1 adalah konsep percabangan..........",
+    pilihan1: "If Else",
+    pilihan2: "If Else If",
+    jawaban: "If Else If",
+    pilihan3: "If",
+    pilihan4: "Switch Case",
+    pilihan5: "Bersarang",
+  },
+  {
+    nomor_soal: 4,
+    soal:
+      '<div>Perhatikan Potongan cerita berikut!Suatu pagi bu Dengklek sedang memasak sayur untuk sarapan. Rasa masakan bu Dengklek dipengaruhi oleh siapa yang membantu. Masakan memiliki rasa asin jika dibantu pa Dengklek, sedangkan masakan bu Dengklek akan terasa enak ketika dibantu Nino. Akan tetapi, jika tidak ada yang membantu, masakannya akan terasa hambar.</div>  <div style="background: #202020; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #cd2828; font-weight: bold">#include&lt;iostream&gt;</span><br><span style="color: #6ab825; font-weight: bold">using</span> <span style="color: #6ab825; font-weight: bold">namespace</span> <span style="color: #d0d0d0">std;</span><br><span style="color: #6ab825; font-weight: bold">int</span> <span style="color: #447fcf">main</span><span style="color: #d0d0d0">(){</span><br>    <span style="color: #6ab825; font-weight: bold">int</span> <span style="color: #d0d0d0">dengklek_bantu</span> <span style="color: #d0d0d0">=</span> <span style="color: #3677a9">0</span><span style="color: #d0d0d0">;</span><br>    <span style="color: #6ab825; font-weight: bold">int</span> <span style="color: #d0d0d0">nino_bantu</span> <span style="color: #d0d0d0">=</span> <span style="color: #3677a9">0</span><span style="color: #d0d0d0">;</span><br><br>    <span style="color: #6ab825; font-weight: bold">if</span><span style="color: #d0d0d0">(.......){</span><br>      <span style="color: #d0d0d0">cout</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #ed9d13">&quot;makanan asin&quot;</span><span style="color: #d0d0d0">;</span><br>    <span style="color: #d0d0d0">}</span><span style="color: #6ab825; font-weight: bold">else</span> <span style="color: #6ab825; font-weight: bold">if</span><span style="color: #d0d0d0">(nino_bantu</span>  <span style="color: #d0d0d0">==</span> <span style="color: #3677a9">1</span><span style="color: #d0d0d0">){</span><br>      <span style="color: #d0d0d0">cout</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #ed9d13">&quot;masakan enak&quot;</span><span style="color: #d0d0d0">;</span><br>    <span style="color: #d0d0d0">}</span><span style="color: #6ab825; font-weight: bold">else</span><span style="color: #d0d0d0">{</span><br>      <span style="color: #d0d0d0">cout</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #ed9d13">&quot;makanan hambar&quot;</span><span style="color: #d0d0d0">;</span><br>    <span style="color: #d0d0d0">}</span><br><br>  <span style="color: #d0d0d0">cout</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #d0d0d0">endl;</span><br>  <span style="color: #6ab825; font-weight: bold">return</span> <span style="color: #3677a9">0</span><span style="color: #d0d0d0">;</span><br><span style="color: #d0d0d0">}</span><br></pre></div>  <div>Kode yang tepat untuk melengkapi program tersebut adalah.....</div>',
+    pilihan1: "dengklek_bantu > 1",
+    pilihan2: "dengklek_bantu == 1",
+    jawaban: "dengklek_bantu == 1",
+    pilihan3: "dengklek+bantu = 1",
+    pilihan4: "dengklek_bantu < 1",
+    pilihan5: "dengklek_bantu <= 1",
+  },
+  {
+    nomor_soal: 5,
+    soal:
+      "Percabangan yang memiliki percabangan lain di dalamnya disebut sebagai .......",
+    pilihan1: "Percabangan If",
+    pilihan2: "Switch Case",
+    pilihan3: "Percabangan bersarang",
+    jawaban: "Percabangan bersarang",
+    pilihan4: "Percabangan If Else",
+    pilihan5: "Percabangan If Else if",
+  },
+  {
+    nomor_soal: 6,
+    soal:
+      "Perhatikan baik-baik contoh kasus ini! <br> Nino sedang ingin memasak, akan tetapi nino hanya akan memasak jika bahannya lengkap, maka dapat dibuat notasi algoritmiknya sebagai berikut. <br> .... (bahan lengkap){<br>.....<br>}",
+    pilihan1: "Memasak-If",
+    pilihan2: "Switch-case",
+    pilihan3: "Switch – memasak",
+    pilihan4: "If – switch",
+    pilihan5: "If – memasak",
+    jawaban: "If – memasak",
+  },
+  {
+    nomor_soal: 2,
+    soal:
+      "Pada percabangan IF, apabila blok kondisi bernilai TRUE, maka aliran data pada flowchart akan dialihkan ke blok .........",
+    pilihan1: "Kondisi",
+    pilihan2: "Variabel",
+    pilihan3: "Tipe data",
+    pilihan4: "Di luar IF",
+    pilihan5: "Instruksi",
+    jawaban: "Instruksi",
+  },
+];
 export { dataSoalPreTest, dataSoalPostTest };
