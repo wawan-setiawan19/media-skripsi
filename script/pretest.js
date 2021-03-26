@@ -1,4 +1,4 @@
-import { dataSoalPreTest } from "./soal.js";
+import { dataSoalPostTest, dataSoalPreTest } from "./soal.js";
 let nomor_soal = 1;
 let pilihan1, pilihan2, pilihan3, pilihan4, pilihan5;
 let soalContainerElement, boxElement;
@@ -44,12 +44,12 @@ const showSoal = (nomor) => {
     btnSelesai.classList.remove("hide");
     soalContainerElement.classList.add("hide");
   } else {
-    soal.innerHTML = `${dataSoalPreTest[nomor - 1].soal}`;
-    pilihan1.innerHTML = `${dataSoalPreTest[nomor - 1].pilihan1}`;
-    pilihan2.innerHTML = `${dataSoalPreTest[nomor - 1].pilihan2}`;
-    pilihan3.innerHTML = `${dataSoalPreTest[nomor - 1].pilihan3}`;
-    pilihan4.innerHTML = `${dataSoalPreTest[nomor - 1].pilihan4}`;
-    pilihan5.innerHTML = `${dataSoalPreTest[nomor - 1].pilihan5}`;
+    soal.innerHTML = `${dataSoalPostTest[nomor - 1].soal}`;
+    pilihan1.innerHTML = `${dataSoalPostTest[nomor - 1].pilihan1}`;
+    pilihan2.innerHTML = `${dataSoalPostTest[nomor - 1].pilihan2}`;
+    pilihan3.innerHTML = `${dataSoalPostTest[nomor - 1].pilihan3}`;
+    pilihan4.innerHTML = `${dataSoalPostTest[nomor - 1].pilihan4}`;
+    pilihan5.innerHTML = `${dataSoalPostTest[nomor - 1].pilihan5}`;
 
     btnNext.addEventListener("click", handleNext);
     btnSelesai.addEventListener("click", handleSelesai);
@@ -72,7 +72,7 @@ const handleNext = () => {
   pilihan3.classList.add("gradient");
   pilihan4.classList.add("gradient");
   pilihan5.classList.add("gradient");
-  if (temp_jawaban == dataSoalPreTest[nomor_soal - 1].jawaban) skor = skor + 5;
+  if (temp_jawaban == dataSoalPostTest[nomor_soal - 1].jawaban) skor = skor + 5;
   console.log(skor);
   nomor_soal = nomor_soal + 1;
   tampilProgress(nomor_soal);

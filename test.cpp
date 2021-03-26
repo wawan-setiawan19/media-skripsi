@@ -1,11 +1,20 @@
-int jumlah_bebek = 10;
+Input
+bil_1 = 3;
+bil_2 = 2;
+bil_3 = 4;
+Output
+4
 
-if(jumlah_bebek < 10){
-  jumlah_bebek = jumlah_bebek *10;
+if(bil_1 > bil_2){
+    if(bil_1 > bil_3){
+        .......
+    }else{
+      Max = bil_3;
+    }
+}else if(........){
+    Max = bil_2;
 }else{
-  jumlah_bebek = jumlah_bebek+2;
+    Max = bil_3;
 }
 
-if(jumlah_bebek < 15){
-  jumlah_bebek = jumlah_bebek +5;
-}
+Cout << max
