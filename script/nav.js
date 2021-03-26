@@ -4,6 +4,7 @@ import getAllGuides from "./guides.js";
 import Menu from "./menu.js";
 import { getAllMission } from "./mission.js";
 import { getButton } from "./pretest.js";
+import { getButtonPost } from "./posttest.js";
 import { getProfile } from "./profile.js";
 import loadScramble from "./scramble.js";
 import { cekTest } from "./test.js";
@@ -75,6 +76,7 @@ const loadPage = (page) => {
         if (page === "test-vak") cekTest();
         if (page === "lengkapi-data") Form.getButtonLengkapiData();
         if (page === "pre-test") getButton();
+        if (page === 'post-test') getButtonPost();
         M.AutoInit();
       } else if (xmlHttp.status === 404) {
         loadPage("404");

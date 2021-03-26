@@ -1,20 +1,28 @@
-Input
-bil_1 = 3;
-bil_2 = 2;
-bil_3 = 4;
-Output
-4
+#include<iostream>
+using namespace std;
 
-if(bil_1 > bil_2){
-    if(bil_1 > bil_3){
-        .......
-    }else{
-      Max = bil_3;
-    }
-}else if(........){
-    Max = bil_2;
-}else{
-    Max = bil_3;
+int main(){
+  bmi = berat/(tinggi*tinggi);
+
+  cout << "Program menhitung Indeks Masa tubuh" << endl;
+  cout << "Masukkan tinggi anda (m)" << endl;
+  cin >> tinggi;
+  cout << "Masukkan berat anda (kg)" << endl;
+  cin >> berat;
+
+  float tinggi, berat, bmi;
+  string status_bmi;
+
+  cout << "berat anda" << bmi << endl;
+  cout << status_bmi << endl;
+
+  if(bmi < 18.5){
+    status_bmi = "Kurus";
+  }else if(bmi < 25){
+    status_bmi = "Normal";
+  }else{
+    status_bmi = "Obesitas";
+  }
+
+  return 0;
 }
-
-Cout << max
