@@ -90,7 +90,7 @@ const loadPage = (page) => {
 };
 
 const loadHome = () => {
-  loadScramble();
+  // loadScramble();
   getAllGuides();
   // getAllMission();
   isGayaBelajar(gaya_belajar);
