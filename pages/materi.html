@@ -1,28 +1,187 @@
 <style>
     .definisi {
-        background-color: teal;
-        color: white;
-        font-weight: 600;
+        font-weight: 500;
     }
-    
-    .materi{
-      margin-bottom: 10px;
+
+    .materi {
+        margin-bottom: 10px;
+    }
+
+    .collapsible{
+        margin-bottom: 70px;
     }
 </style>
-<ul class="collapsible no-border row" id="guides">
+<ul class="collapsible no-border row" id="materi">
     <li>
         <div class="collapsible-header gradient no-border guide-header">
             <div class="goldman" id="judulMateri">Percabangan</div>
         </div>
         <div class="collapsible-body border-gradient">
-          <div id="pembukaan">Halo Agen, selamat datang di Misi Struktur Kendali Percabangan, pada bagian ini kamu akan belajar mengenai konsep dasar percabangan.</div>
+            <div class="materi" id="pembukaan">
+                Halo Agen, selamat datang di Misi Struktur Kendali Percabangan, pada bagian ini kamu
+                akan belajar mengenai konsep dasar percabangan.
+            </div>
             <div class="definisi" id="definisiMateri">
-              <div class="materi"><b>Percabangan</b> adalah alur pemrograman di mana isntruksi akan dijalankan/dikerjakan apabila blok kondisi terpenuhi/sesuai</div>
-              <div class="materi"><b>Blok Kondisi</b> adalah satu atau sekumpulan kondisi/syarat</div>
-              <div class="materi"><b>Instruksi</b> adalah sesuatu hal yang akan dikerjakan</div>
+                <div class="materi">
+                    <b>Percabangan</b> adalah alur pemrograman di mana isntruksi akan
+                    dijalankan/dikerjakan apabila blok kondisi terpenuhi/sesuai
+                </div>
+                <div class="materi">
+                    <b>Blok Kondisi</b> adalah satu atau sekumpulan kondisi/syarat
+                </div>
+                <div class="materi"><b>Instruksi</b> adalah sesuatu hal yang akan dikerjakan</div>
+                <div class="materi"><b>Simbol Flowchart</b> untuk percabangan adalah belah ketupat</div>
             </div>
             <div id="mediaMateri">
-                <img src="./assets/image/materi/percabangan.jpg" alt="" class="responsive-img">
+                <img src="./assets/image/materi/percabangan.jpg" alt="" class="responsive-img" />
+            </div>
+        </div>
+    </li>
+    <li>
+        <div class="collapsible-header gradient no-border guide-header">
+            <div class="goldman" id="judulMateri">Macam-macam Percabangan dan Contoh Kasus</div>
+        </div>
+        <div class="collapsible-body border-gradient">
+            <div class="materi" id="pembukaan">
+                Pada bagian ini, kita akan bersama-sama mengetahui macam-macam percabangan dan
+                contoh percabangan dalam kehidupan sehari-hari
+            </div>
+            <div class="definisi" id="definisiMateri">
+                <div class="materi">
+                    <b>Macam-macam Percabangan</b>
+                    <ol>
+                        <li>Percabangan If</li>
+                        <li>Percabangan If Else</li>
+                        <li>Percabangan If Else If</li>
+                        <li>Percabangan Switch Case</li>
+                        <li>Percabangan If Bersarang</li>
+                    </ol>
+                </div>
+                <div class="materi">
+                    <b>Contoh Kasus</b>
+                    <div>
+                        Saat kamu dimintai tolong oleh ibumu. Ibumu berpesan "Belikan 1 Kg telur,
+                        kalau ada sisa uang 5000 beli kecap 2 sachet"
+                    </div>
+                </div>
+                <div class="materi">
+                    <b>Breakdown contoh masalah</b>
+                    <div><b>Kondisi:</b> Sisa uang 5000</div>
+                    <div><b>Instruksi:</b> Beli kecap 2 sachet</div>
+                </div>
+            </div>
+            <div id="mediaMateri"></div>
+        </div>
+    </li>
+    <li>
+        <div class="collapsible-header gradient no-border guide-header">
+            <div class="goldman" id="judulMateri">Percabangan If</div>
+        </div>
+        <div class="collapsible-body border-gradient">
+            <div class="materi" id="pembukaan">
+                Pada bagian ini kita akan belajar mengenai konsep percabangan If, simak yah!
+            </div>
+            <div class="definisi" id="definisiMateri">
+                <div class="materi">
+                    <b>Percabangan If</b> adalah percabangan yang <u>hanya akan</u> mengerjakan
+                    instruksi apabila blok kondisi terpenuhi
+                </div>
+                <div class="materi">
+                    <b>Notasi Algoritmik</b>
+                    <div>
+                        <pre style="color: #d1d1d1; background: #000000"><span style='color:#e66170; font-weight:bold; '>if</span><span style='color:#d2cd86; '>(</span>blok kondisi<span style='color:#d2cd86; '>)</span><span style='color:#b060b0; '>{</span><br>    instruksi<span style='color:#b060b0; '>;</span><br><span style='color:#b060b0; '>}</span><br></pre>
+                    </div>
+                </div>
+                <div class="materi">
+                    <b>Flowchart</b>
+                    <div  style="text-align: center; margin-top: 10px;">
+                        <img src="./assets/image/materi/flowchart-percabangan-if.jpg" alt="">
+                    </div>
+                </div>
+                <div class="materi">
+                    <b>Contoh Kasus</b>
+                    <div>Ketika kamu berjalan-jalan di sepanjang jalan kenangan, kamu tiba-tiba ingin membeli segelas kopi. Akan tetapi kamu hanya akan membeli kopi jika uang di dompet kamu lebih dari harga kopi. Kopi yang ingin beli harganya 8000, sedangkan uang di dompet kamu cuma ada 4000</div>
+                    <div>Buatlah kode program untuk contoh kasus tersebut!</div>
+                    <div style="background: #202020; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #cd2828; font-weight: bold">#include&lt;iostream&gt;</span><br><span style="color: #6ab825; font-weight: bold">using</span> <span style="color: #6ab825; font-weight: bold">namespace</span> <span style="color: #d0d0d0">std;</span><br><br><span style="color: #6ab825; font-weight: bold">int</span> <span style="color: #447fcf">main</span><span style="color: #d0d0d0">(){</span><br>    <span style="color: #6ab825; font-weight: bold">int</span> <span style="color: #d0d0d0">uang_di_dompet</span> <span style="color: #d0d0d0">=</span> <span style="color: #3677a9">4000</span><span style="color: #d0d0d0">;</span><br>    <span style="color: #6ab825; font-weight: bold">int</span> <span style="color: #d0d0d0">harga_kopi</span> <span style="color: #d0d0d0">=</span> <span style="color: #3677a9">8000</span><span style="color: #d0d0d0">;</span><br><br>    <span style="color: #6ab825; font-weight: bold">if</span><span style="color: #d0d0d0">(uang_di_dompet</span> <span style="color: #d0d0d0">&gt;</span> <span style="color: #d0d0d0">harga_kopi){</span><br>        <span style="color: #d0d0d0">cout</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #ed9d13">&quot;beli kopi&quot;</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #d0d0d0">endl;</span><br>    <span style="color: #d0d0d0">}</span><br>    <span style="color: #6ab825; font-weight: bold">return</span> <span style="color: #3677a9">0</span><span style="color: #d0d0d0">;</span><br><span style="color: #d0d0d0">}</span><br></pre></div>
+                </div>
+            </div>
+            <div id="mediaMateri">
+                <img src="./assets/image/materi/percabangan-if.jpg" alt="" class="responsive-img" />
+            </div>
+        </div>
+    </li>
+    <li>
+        <div class="collapsible-header gradient no-border guide-header">
+            <div class="goldman" id="judulMateri">Percabangan If Else</div>
+        </div>
+        <div class="collapsible-body border-gradient">
+            <div class="materi" id="pembukaan">Pada bagian ini kita akan mempelajari mengenai konsep percabangan If Else</div>
+            <div class="definisi" id="definisiMateri">
+                <div class="materi"><b>Percabangan If Else</b> adalah jenis percabangan yang apabila blok kondisi terpenuhi/sesuai/benar, maka instruksi akan dijalankan, akan tetapi jika blok kondisi tidak terpenuhi/salah, maka terdapat pilihan lain</div>
+                <div class="materi"><b>Notasi Algotimik</b>
+                    <div style="background: #202020; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #6ab825; font-weight: bold">if</span><span style="color: #d0d0d0">(</span> <span style="color: #d0d0d0">blok</span> <span style="color: #d0d0d0">kondisi</span> <span style="color: #d0d0d0">){</span><br>   <span style="color: #d0d0d0">instruksi;</span><br><span style="color: #d0d0d0">}</span><span style="color: #6ab825; font-weight: bold">else</span><span style="color: #d0d0d0">{</span><br>   <span style="color: #d0d0d0">alternatif_instruksi;</span><br><span style="color: #d0d0d0">}</span><br></pre></div>
+                </div>
+                <div class="materi">
+                    <b>Flowchart</b>
+                    <img src="./assets/image/materi/flowchart-if-else.png" alt="">
+                </div>
+                <div class="materi">
+                    <b>Contoh Kasus</b>
+                    <div>Ketika kamu menjalani ulangan, gurumu akan berkata yang nilainya lebih dari kkm maka kamu lulus tetapi apabila nilai ulangan kurang dari kkm maka kamu remedial. Nilai kamu adalah 70, sedangkan nilai kkm adalah 75. Buatlah program dalam bahasa C untuk contoh kasus ini!</div>
+                </div>
+                <div style="background: #202020; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #cd2828; font-weight: bold">#include&lt;iostream&gt;</span><br><span style="color: #6ab825; font-weight: bold">using</span> <span style="color: #6ab825; font-weight: bold">namespace</span> <span style="color: #d0d0d0">std;</span><br><span style="color: #6ab825; font-weight: bold">int</span> <span style="color: #447fcf">main</span><span style="color: #d0d0d0">(){</span><br>    <span style="color: #6ab825; font-weight: bold">int</span> <span style="color: #d0d0d0">nilai_ulangan</span> <span style="color: #d0d0d0">=</span> <span style="color: #3677a9">70</span><span style="color: #d0d0d0">;</span><br>    <span style="color: #6ab825; font-weight: bold">int</span> <span style="color: #d0d0d0">kkm</span> <span style="color: #d0d0d0">=</span> <span style="color: #3677a9">75</span><span style="color: #d0d0d0">;</span><br>    <span style="color: #6ab825; font-weight: bold">if</span><span style="color: #d0d0d0">(nilai_ulangan</span> <span style="color: #d0d0d0">&gt;=</span> <span style="color: #d0d0d0">kkm){</span><br>        <span style="color: #d0d0d0">cout</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #ed9d13">&quot;lulus&quot;</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #d0d0d0">endl;</span><br>    <span style="color: #d0d0d0">}</span><span style="color: #6ab825; font-weight: bold">else</span><span style="color: #d0d0d0">{</span><br>        <span style="color: #d0d0d0">cout</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #ed9d13">&quot;remedial&quot;</span> <span style="color: #d0d0d0">&lt;&lt;</span> <span style="color: #d0d0d0">endl;</span><br>    <span style="color: #d0d0d0">}</span><br>    <span style="color: #6ab825; font-weight: bold">return</span> <span style="color: #3677a9">0</span><span style="color: #d0d0d0">;</span><br><span style="color: #d0d0d0">}</span><br></pre></div>
+            </div>
+            <div id="mediaMateri">
+                <img src="./assets/image/materi/percabangan-if-else.jpg" alt="" class="responsive-img" />
+            </div>
+        </div>
+    </li>
+    <li>
+        <div class="collapsible-header gradient no-border guide-header">
+            <div class="goldman" id="judulMateri">Percabangan If Else If</div>
+        </div>
+        <div class="collapsible-body border-gradient">
+            <div class="materi" id="pembukaan">Pada bagian ini kita akan belajar mengenai konsep If Else If</div>
+            <div class="definisi" id="definisiMateri">
+                <div class="materi"><b>Percabangan If Else If</b> adalah percabangan yang jika pada blok kondisi pertama belum terpenuhi maka periksa blok kondisi kedua, jika blok kondisi kedua belum terpenuhi maka periksa blok kondisi ketiga dst. Sampai kondisinya terpenuhi.</div>
+                <div class="materi"><b>Notasi Algoritmik</b>
+                    <div style="background: #202020; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #6ab825; font-weight: bold">if</span><span style="color: #d0d0d0">(</span> <span style="color: #d0d0d0">blok</span> <span style="color: #d0d0d0">kondisi</span> <span style="color: #3677a9">1</span> <span style="color: #d0d0d0">){</span><br> <span style="color: #d0d0d0">instruksi</span> <span style="color: #3677a9">1</span><span style="color: #d0d0d0">;</span><br><span style="color: #d0d0d0">}</span><span style="color: #6ab825; font-weight: bold">else</span> <span style="color: #6ab825; font-weight: bold">if</span><span style="color: #d0d0d0">(</span> <span style="color: #d0d0d0">blok</span> <span style="color: #d0d0d0">kondisi</span> <span style="color: #3677a9">2</span> <span style="color: #d0d0d0">){</span><br>   <span style="color: #d0d0d0">instruksi</span> <span style="color: #3677a9">2</span><span style="color: #d0d0d0">;</span><br><span style="color: #a61717; background-color: #e3d2d2">...</span><br><span style="color: #d0d0d0">}</span><span style="color: #6ab825; font-weight: bold">else</span><span style="color: #d0d0d0">{</span><br> <span style="color: #d0d0d0">instruksi</span> <span style="color: #d0d0d0">n;</span><br><span style="color: #d0d0d0">}</span><br></pre></div>
+                </div>
+                <div class="materi"><b>Flowchart</b><div><img src="./assets/image/materi/flowchart-if-else-if.png" alt="" class="responsive-img"></div></div>
+                <div class="materi"><b>Contoh Kasus</b><div>Ketika kamu melihat nilai rapot terdapat indeks huruf. Jika kamu mendapat nilai lebih dari 85 kamu akan mendapat A, lebih dari 70 kamu akan mendapat B, lebih dari 55 kamu akan medapat C, lebih dari 40 kamu akan mendapat D, kurang dari 40 kamu mendapat E. nilaimu adalah 70. Maka, buatlah program untuk contoh kasus ini!</div></div>
+                <div style="background: #202020; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #cd2828; font-weight: bold">#include&lt;iostream&gt;</span><br><span style="color: #6ab825; font-weight: bold">using</span> <span style="color: #6ab825; font-weight: bold">namespace</span> <span style="color: #d0d0d0">std;</span><br><span style="color: #6ab825; font-weight: bold">int</span> <span style="color: #447fcf">main</span><span style="color: #d0d0d0">(){</span><br>    <span style="color: #6ab825; font-weight: bold">int</span> <span style="color: #d0d0d0">nilai</span> <span style="color: #d0d0d0">=</span> <span style="color: #3677a9">70</span><span style="color: #d0d0d0">;</span><br>    <span style="color: #6ab825; font-weight: bold">char</span> <span style="color: #d0d0d0">indeks;</span><br><br>    <span style="color: #6ab825; font-weight: bold">if</span><span style="color: #d0d0d0">(nilai</span> <span style="color: #d0d0d0">&gt;=</span> <span style="color: #3677a9">85</span> <span style="color: #d0d0d0">&amp;&amp;</span> <span style="color: #d0d0d0">nilai</span> <span style="color: #d0d0d0">&lt;=</span><span style="color: #3677a9">100</span><span style="color: #d0d0d0">){</span><br>        <span style="color: #d0d0d0">indeks</span> <span style="color: #d0d0d0">=</span> <span style="color: #ed9d13">&#39;A&#39;</span><span style="color: #d0d0d0">;</span><br>    <span style="color: #d0d0d0">}</span><span style="color: #6ab825; font-weight: bold">else</span> <span style="color: #6ab825; font-weight: bold">if</span><span style="color: #d0d0d0">(nilai</span> <span style="color: #d0d0d0">&gt;=</span> <span style="color: #3677a9">70</span><span style="color: #d0d0d0">){</span><br>        <span style="color: #d0d0d0">indeks</span> <span style="color: #d0d0d0">=</span> <span style="color: #ed9d13">&#39;B&#39;</span><span style="color: #d0d0d0">;</span><br>    <span style="color: #d0d0d0">}</span><span style="color: #6ab825; font-weight: bold">else</span> <span style="color: #6ab825; font-weight: bold">if</span><span style="color: #d0d0d0">(nilai</span> <span style="color: #d0d0d0">&gt;=</span> <span style="color: #3677a9">55</span><span style="color: #d0d0d0">){</span><br>        <span style="color: #d0d0d0">indeks</span> <span style="color: #d0d0d0">=</span> <span style="color: #ed9d13">&#39;C&#39;</span><span style="color: #d0d0d0">;</span><br>    <span style="color: #d0d0d0">}</span><span style="color: #6ab825; font-weight: bold">else</span> <span style="color: #6ab825; font-weight: bold">if</span><span style="color: #d0d0d0">(nilai</span> <span style="color: #d0d0d0">&gt;=</span> <span style="color: #3677a9">40</span><span style="color: #d0d0d0">){</span><br>        <span style="color: #d0d0d0">indeks</span> <span style="color: #d0d0d0">=</span> <span style="color: #ed9d13">&#39;D&#39;</span><span style="color: #d0d0d0">;</span><br>    <span style="color: #d0d0d0">}</span><span style="color: #6ab825; font-weight: bold">else</span><span style="color: #d0d0d0">{</span><br>        <span style="color: #d0d0d0">indeks</span> <span style="color: #d0d0d0">=</span> <span style="color: #ed9d13">&#39;E&#39;</span><span style="color: #d0d0d0">;</span><br>    <span style="color: #d0d0d0">}</span><br><br>    <span style="color: #6ab825; font-weight: bold">return</span> <span style="color: #3677a9">0</span><span style="color: #d0d0d0">;</span><br><span style="color: #d0d0d0">}</span><br></pre></div>
+
+            </div>
+            <div id="mediaMateri">
+                <img src="./assets/image/materi/percabangan.jpg" alt="" class="responsive-img" />
+            </div>
+        </div>
+    </li>
+    <li>
+        <div class="collapsible-header gradient no-border guide-header">
+            <div class="goldman" id="judulMateri">Percabangan Switch Case</div>
+        </div>
+        <div class="collapsible-body border-gradient">
+            <div class="materi" id="pembukaan"></div>
+            <div class="definisi" id="definisiMateri">
+                <div class="materi"></div>
+            </div>
+            <div id="mediaMateri">
+                <img src="./assets/image/materi/percabangan.jpg" alt="" class="responsive-img" />
+            </div>
+        </div>
+    </li>
+    <li>
+        <div class="collapsible-header gradient no-border guide-header">
+            <div class="goldman" id="judulMateri">Percabangan Bersarang</div>
+        </div>
+        <div class="collapsible-body border-gradient">
+            <div class="materi" id="pembukaan"></div>
+            <div class="definisi" id="definisiMateri">
+                <div class="materi"></div>
+            </div>
+            <div id="mediaMateri">
+                <img src="./assets/image/materi/percabangan.jpg" alt="" class="responsive-img" />
             </div>
         </div>
     </li>
