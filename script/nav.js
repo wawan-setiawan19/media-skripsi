@@ -2,11 +2,9 @@ import { isGayaBelajar } from "./app.js";
 import Form from "./form.js";
 import getAllGuides from "./guides.js";
 import Menu from "./menu.js";
-import { getAllMission } from "./mission.js";
 import { getButton } from "./pretest.js";
 import { getButtonPost } from "./posttest.js";
 import { getProfile } from "./profile.js";
-import loadScramble from "./scramble.js";
 import { cekTest } from "./test.js";
 
 // let page = getUrl[0];
@@ -92,9 +90,7 @@ const loadPage = (page) => {
 };
 
 const loadHome = () => {
-  // loadScramble();
   getAllGuides();
-  // getAllMission();
   isGayaBelajar(gaya_belajar);
 };
 

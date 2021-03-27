@@ -21,7 +21,7 @@ const guides = [
         id: 4,
         judul_panduan: "Apa itu Misi?",
         deskripsi:
-            "Setelah daftar kamu bisa login menggunakan form untuk login, setelah login silahkan kerjakan misi yang ada",
+            "Setelah daftar kamu bisa login menggunakan form untuk login, setelah login silahkan kerjakan misi yang ada, misi adalah serangkaian kegiatan yang harus dikerjakan",
     },
     {
         id: 5,
