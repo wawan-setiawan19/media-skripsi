@@ -1,7 +1,7 @@
 <style>
-  .misi {
+  /* .misi {
     margin-top: -10%;
-  }
+  } */
   .container {
     padding: 0;
   }
@@ -23,7 +23,7 @@
     background-color: rgb(139, 209, 255);
   }
 
-  #message-input{
+  #message-input {
     color: white;
   }
   #chat {
@@ -32,24 +32,24 @@
     width: 100%;
   }
 
-  input{
+  input {
     border: none;
   }
 
-  input:active{
+  input:active {
     border: none;
   }
 
-  @media screen and (min-width:760px) {
-    #chat{
-      margin-top: 10%;
+  @media screen and (min-width: 760px) {
+    #chat {
+      /* margin-top: 10%; */
       position: relative;
-      height: calc(90vh - 10px);
+      height: calc(90vh - 30px);
     }
   }
 
-  @media screen and (min-width:1020px) {
-    #chat{
+  @media screen and (min-width: 1020px) {
+    #chat {
       height: calc(90vh - 20px);
     }
   }
@@ -65,7 +65,18 @@
 </div>
 
 <div class="container misi">
-  <div id="materi" class="col s12">Materi</div>
+  <div id="materi" class="col s12">
+    <ul class="collapsible no-border row" id="guides">
+      <li>
+        <div class="collapsible-header gradient no-border guide-header">
+          <div class="goldman" id="judulMateri">${element.judul_panduan}</div>
+        </div>
+        <div class="collapsible-body border-gradient">
+          <p id="deskripsiMateri">${element.deskripsi}</p>
+        </div>
+      </li>
+    </ul>
+  </div>
   <div id="lkpd" class="col s12">LKPD</div>
   <div id="chat" class="col s12">
     <div class="chat-container">
@@ -73,11 +84,7 @@
         <ul id="messages"></ul>
       </div>
       <div class="input-field col s12">
-        <input
-          id="message-input"
-          type="text"
-          placeholder="masukkan pesan"
-        />
+        <input id="message-input" type="text" placeholder="masukkan pesan" />
         <span class="material-icons field-icon" id="btnSend">send</span>
       </div>
     </div>

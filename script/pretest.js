@@ -1,12 +1,14 @@
+import { loadPage, loadToast } from "./nav.js";
 import { dataSoalPreTest } from "./soal.js";
 let nomor_soal = 1;
 let pilihan1, pilihan2, pilihan3, pilihan4, pilihan5;
-let soalContainerElement, boxElement;
+let soalContainerElement, boxElement, countdownElement;
+let btnSelesai;
 let temp_jawaban = "";
 let skor = 0;
 const getButton = () => {
   boxElement = document.querySelector(".box-dialog-container");
-  const countdownElement = document.querySelector(".countdown");
+  countdownElement = document.querySelector(".countdown");
   soalContainerElement = document.querySelector(".soalContainer");
   const btnHide = document.querySelector("#hideBtn");
   btnHide.addEventListener("click", () => {
@@ -37,11 +39,17 @@ const showSoal = (nomor) => {
   pilihan4 = document.querySelector("#pilihan4");
   pilihan5 = document.querySelector("#pilihan5");
   const btnNext = document.querySelector("#next");
-  const btnSelesai = document.querySelector("#selesai");
+  btnSelesai = document.querySelector("#selesai");
 
   if (nomor > 20) {
     btnNext.classList.add("hide");
     btnSelesai.classList.remove("hide");
+    boxElement.classList.remove("hide");
+    console.log(skor);
+    boxElement.innerHTML = `
+    <div style="text-align:center;">Nilai kamu</div>
+    <div class="angka-countdown">${skor}</div>
+    <div class="message">Kamu sudah selesai tes, kamu klik selesai dan data akan tersimpan</div>`;
     soalContainerElement.classList.add("hide");
   } else {
     soal.innerHTML = `${dataSoalPreTest[nomor - 1].soal}`;
@@ -62,8 +70,18 @@ const showSoal = (nomor) => {
 };
 
 const handleSelesai = () => {
-  boxElement.classList.remove("hide");
-  boxElement.innerHTML = `<h2>${skor}</h2>`;
+  pretest = skor;
+  let data = {
+    pretest : skor,
+  }
+  firebaseDatabase.ref(`users/${uid}/data`).update(data, (err) => {
+    if (err) {
+      loadToast(err);
+    } else {
+      loadToast("Pretest tersimpan");
+    }
+  });
+  loadPage(page);
 };
 
 const handleNext = () => {
@@ -73,7 +91,7 @@ const handleNext = () => {
   pilihan4.classList.add("gradient");
   pilihan5.classList.add("gradient");
   if (temp_jawaban === dataSoalPreTest[nomor_soal - 1].jawaban) skor = skor + 5;
-  console.log(skor);
+  // console.log(skor);
   nomor_soal = nomor_soal + 1;
   tampilProgress(nomor_soal);
   getSoal(nomor_soal);
