@@ -1,55 +1,55 @@
 <style>
-  .container {
-    padding: 0;
-  }
-  .field-icon {
-    position: absolute;
-    right: 20px;
-    top: 20px;
-    cursor: pointer;
-    color: white;
-  }
-  .input-field {
-    border-radius: 40px;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    padding-top: 10px;
-    padding-left: 30px;
-    padding-right: 10%;
-    background-color: rgb(139, 209, 255);
-  }
-
-  #message-input {
-    color: white;
-  }
-  #chat {
-    position: relative;
-    height: calc(90vh - 40px);
-    width: 100%;
-  }
-
-  input {
-    border: none;
-  }
-
-  input:active {
-    border: none;
-  }
-
-  @media screen and (min-width: 760px) {
-    #chat {
-      /* margin-top: 10%; */
-      position: relative;
-      height: calc(90vh - 30px);
+    .container {
+        padding: 0;
     }
-  }
-
-  @media screen and (min-width: 1020px) {
-    #chat {
-      height: calc(90vh - 20px);
+    .field-icon {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        cursor: pointer;
+        color: white;
     }
-  }
+    .input-field {
+        border-radius: 40px;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        padding-top: 10px;
+        padding-left: 30px;
+        padding-right: 10%;
+        background-color: rgb(139, 209, 255);
+    }
+
+    #message-input {
+        color: white;
+    }
+    #chat {
+        position: relative;
+        height: calc(80vh - 40px);
+        width: 100%;
+    }
+
+    input {
+        border: none;
+    }
+
+    input:active {
+        border: none;
+    }
+
+    @media screen and (min-width: 760px) {
+        #chat {
+            /* margin-top: 10%; */
+            position: relative;
+            height: calc(80vh - 30px);
+        }
+    }
+
+    @media screen and (min-width: 1020px) {
+        #chat {
+            height: calc(80vh - 20px);
+        }
+    }
     .definisi {
         font-weight: 500;
     }
@@ -61,33 +61,34 @@
     .collapsible {
         margin-bottom: 70px;
     }
+  ::placeholder{
+    color: white;
+  }
 </style>
 <div class="nav-content gradient">
-  <div class="container">
-    <ul class="tabs tabs-transparent">
-      <li class="tab"><a href="#materi">Materi</a></li>
-      <li class="tab"><a class="active" href="#lkpd">LKPD</a></li>
-      <li class="tab"><a href="#chat">Chat Tim</a></li>
-    </ul>
-  </div>
+    <div class="container">
+        <ul class="tabs tabs-transparent">
+            <li class="tab"><a href="#materi">Materi</a></li>
+            <li class="tab"><a class="active" href="#lkpd">LKPD</a></li>
+            <li class="tab"><a href="#chat">Chat Tim</a></li>
+        </ul>
+    </div>
 </div>
 
 <div class="container misi">
-  <div id="materi" class="col s12">
-    <ul class="collapsible no-border row" id="daftarMateri">
-      
-    </ul>
-  </div>
-  <div id="lkpd" class="col s12">LKPD</div>
-  <div id="chat" class="col s12">
-    <div class="chat-container">
-      <div class="message-container">
-        <ul id="messages"></ul>
-      </div>
-      <div class="input-field col s12">
-        <input id="message-input" type="text" placeholder="masukkan pesan" />
-        <span class="material-icons field-icon" id="btnSend">send</span>
-      </div>
+    <div id="materi" class="col s12">
+        <ul class="collapsible no-border row" id="daftarMateri"></ul>
     </div>
-  </div>
+    <div id="lkpd" class="col s12">LKPD</div>
+    <div id="chat" class="col s12">
+        <div class="chat-container">
+            <div class="message-container">
+                <ul id="messages"></ul>
+            </div>
+            <div class="input-field col s12">
+                <input id="message-input" type="text" placeholder="masukkan pesan" />
+                <span class="material-icons field-icon" id="btnSend">send</span>
+            </div>
+        </div>
+    </div>
 </div>
