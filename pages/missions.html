@@ -53,6 +53,17 @@
       height: calc(90vh - 20px);
     }
   }
+    .definisi {
+        font-weight: 500;
+    }
+
+    .materi {
+        margin-bottom: 10px;
+    }
+
+    .collapsible {
+        margin-bottom: 70px;
+    }
 </style>
 <div class="nav-content gradient">
   <div class="container">
@@ -66,15 +77,8 @@
 
 <div class="container misi">
   <div id="materi" class="col s12">
-    <ul class="collapsible no-border row" id="guides">
-      <li>
-        <div class="collapsible-header gradient no-border guide-header">
-          <div class="goldman" id="judulMateri">${element.judul_panduan}</div>
-        </div>
-        <div class="collapsible-body border-gradient">
-          <p id="deskripsiMateri">${element.deskripsi}</p>
-        </div>
-      </li>
+    <ul class="collapsible no-border row" id="daftarMateri">
+      
     </ul>
   </div>
   <div id="lkpd" class="col s12">LKPD</div>

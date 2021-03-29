@@ -6,6 +6,7 @@ import { getButton } from "./pretest.js";
 import { getButtonPost } from "./posttest.js";
 import { getProfile } from "./profile.js";
 import { cekTest } from "./test.js";
+import { getMateri } from "./misi.js";
 
 // let page = getUrl[0];
 class Navigasi {
@@ -109,6 +110,8 @@ const loadToast = (message) => {
 const cekPreTest = () => {
   if (pretest == undefined || pretest == null) {
     loadPage("pre-test");
+  } else {
+    getMateri();
   }
 };
 
