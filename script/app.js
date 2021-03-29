@@ -6,7 +6,6 @@ document.addEventListener("DOMContentLoaded", () => {
             uid = user.uid;
             nama = user.displayName;
             email = user.email;
-            // console.log(user);
             Navigasi.loadTopNav();
             Navigasi.loadBotNav();
             bodyElement.classList.remove("body-form");
@@ -22,7 +21,6 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 const getUserProfile = () => {
-    console.log(uid);
     firebaseDatabase.ref(`users/${uid}/data`).on("value", (user) => {
         const data = user.val();
         if (data) {

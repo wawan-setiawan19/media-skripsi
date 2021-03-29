@@ -1,4 +1,3 @@
-import { isGayaBelajar } from "./app.js";
 import { loadPage, loadToast } from "./nav.js";
 
 let nameElement, profilePicture, kelasElement, gayaBelajarElement, nilaiPreTestElement;
@@ -9,7 +8,6 @@ const getProfile = () => {
   gayaBelajarElement = document.querySelector(".gaya-belajar");
   nilaiPreTestElement = document.querySelector("#nilaiPretest");
   showProfile(nama, foto, kelas, gaya_belajar, pretest);
-  // isGayaBelajar(gaya_belajar);
 };
 
 const showProfile = (nama, foto, gaya_belajar, kelas, pretest) => {
