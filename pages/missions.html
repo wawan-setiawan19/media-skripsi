@@ -1,7 +1,4 @@
 <style>
-    .container {
-        padding: 0;
-    }
     .field-icon {
         position: absolute;
         right: 20px;
@@ -10,10 +7,8 @@
         color: white;
     }
     .field-chat {
-        border-radius: 40px;
-        position: absolute;
-        bottom: 0;
-        width: 100%;
+        position: relative;
+        /* border-radius: 10px; */
         padding-top: 10px;
         padding-left: 30px;
         padding-right: 10%;
@@ -24,8 +19,14 @@
     }
     #chat {
         position: relative;
-        height: calc(80vh - 60px);
+        height: calc(80vh - 10px);
         width: 100%;
+    }
+
+    @media screen and (max-width: 360px) {
+        #chat {
+            top: -60px;
+        }
     }
 
     input {
@@ -68,8 +69,9 @@
         color: white;
         border-radius: 20px;
     }
-    #messages {
-        height: 60vh;
+    .message-container {
+        height: 70vh;
+        margin-bottom: 20px;
         overflow-y: scroll;
     }
 </style>
