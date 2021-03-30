@@ -7,6 +7,7 @@ import { getButtonPost } from "./posttest.js";
 import { getProfile } from "./profile.js";
 import { cekTest } from "./test.js";
 import { getMateri } from "./misi.js";
+import { lihatKelompok } from "./randomKelompok.js";
 
 // let page = getUrl[0];
 class Navigasi {
@@ -98,6 +99,7 @@ const loadHome = () => {
 const loadProfile = () => {
   getProfile();
   Form.getLogout();
+  lihatKelompok();
 };
 
 const loadToast = (message) => {

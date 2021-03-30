@@ -7,34 +7,7 @@ let kelompokNilai1 = [],
   reverseKelompokNilai4 = [];
 let kelompokDummy;
 let kelompok = [];
-let dataSiswa = [
-  // { nama: "John", nilai: 20 },
-  // { nama: "Doe", nilai: 37 },
-  // { nama: "Jane", nilai: 83 },
-  // { nama: "Ujang", nilai: 93 },
-  // { nama: "Marsel", nilai: 62 },
-  // { nama: "Lyo", nilai: 48 },
-  // { nama: "Ardit", nilai: 87 },
-  // { nama: "Dodit", nilai: 50 },
-  // { nama: "Dadang", nilai: 70 },
-  // { nama: "Dewa", nilai: 86 },
-  // { nama: "Irene", nilai: 69 },
-  // { nama: "Iani", nilai: 34 },
-  // { nama: "Upi", nilai: 62 },
-  // { nama: "Ziva", nilai: 28 },
-  // { nama: "Tiara", nilai: 36 },
-  // { nama: "Mark", nilai: 80 },
-  // { nama: "Boy", nilai: 22 },
-  // { nama: "Ehsan", nilai: 89 },
-  // { nama: "Echa", nilai: 47 },
-  // { nama: "Abdul", nilai: 49 },
-  // { nama: "Echa", nilai: 47 },
-];
-
-// firebaseDatabase.ref("users").on("value", user=>{
-//     const userData = user.val();
-//     console.log(userData);
-// })
+let dataSiswa = [];
 
 const urutData = () => {
   dataUrut = dataSiswa.sort((a, b) => b.nilai - a.nilai);
@@ -71,24 +44,27 @@ const bagiKelompok = () => {
     kelompok.push(kelompokDummy);
   }
 
-  console.log(kelompok);
 };
 
-firebaseDatabase.ref("nilai").once("value", (user) => {
-  const data = user.val();
+const lihatKelompok = () => {
+  firebaseDatabase.ref("nilai").once("value", (user) => {
+    const data = user.val();
 
-  data.forEach((element) => {
-    dataSiswa.push(element);
+    data.forEach((element) => {
+      dataSiswa.push(element);
+    });
+    bagiKelompok();
+    cetakAnggota();
   });
-  bagiKelompok();
-  cetakAnggota();
-});
+};
 
-cetakAnggota = () => {
+const cetakAnggota = () => {
   for (let i = 0; i < kelompok.length; i++) {
-    if (nama === kelompok[i].anggota1.nama) return console.log(`kelompok ${i}`);
-    if (nama === kelompok[i].anggota2.nama) return console.log(`kelompok ${i}`);
-    if (nama === kelompok[i].anggota3.nama) return console.log(`kelompok ${i}`);
-    if (nama === kelompok[i].anggota4.nama) return console.log(`kelompok ${i}`);
+    if (nama === kelompok[i].anggota1.nama) return (nama_kelompok = i + 1);
+    if (nama === kelompok[i].anggota2.nama) return (nama_kelompok = i + 1);
+    if (nama === kelompok[i].anggota3.nama) return (nama_kelompok = i + 1);
+    if (nama === kelompok[i].anggota4.nama) return (nama_kelompok = i + 1);
   }
 };
+
+export { lihatKelompok };

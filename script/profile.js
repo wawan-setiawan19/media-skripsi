@@ -1,13 +1,14 @@
 import { loadPage, loadToast } from "./nav.js";
 
-let nameElement, profilePicture, kelasElement, gayaBelajarElement, nilaiPreTestElement;
+let nameElement, profilePicture, kelasElement, gayaBelajarElement, nilaiPreTestElement, kelompokElement;
 const getProfile = () => {
   nameElement = document.querySelector(".nama");
   profilePicture = document.querySelector(".profile-picture");
   kelasElement = document.querySelector(".kelas");
   gayaBelajarElement = document.querySelector(".gaya-belajar");
   nilaiPreTestElement = document.querySelector("#nilaiPretest");
-  showProfile(nama, foto, kelas, gaya_belajar, pretest);
+  kelompokElement = document.querySelector(".kelompok");
+  showProfile(nama, foto, kelas, gaya_belajar, pretest, nama_kelompok);
 };
 
 const showProfile = (nama, foto, gaya_belajar, kelas, pretest) => {
@@ -16,6 +17,7 @@ const showProfile = (nama, foto, gaya_belajar, kelas, pretest) => {
   kelasElement.innerHTML = kelas;
   gayaBelajarElement.innerHTML = gaya_belajar;
   nilaiPreTestElement.innerHTML = `Nilai Pretest ${pretest}`;
+  kelompokElement.innerHTML = `KELOMPOK ${nama_kelompok}`
 };
 
 const updateGayaBelajar = (gaya, id) => {
