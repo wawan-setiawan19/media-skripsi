@@ -44,7 +44,7 @@ const showMessage = () => {
                 `;
         }else{
             dummyMessage += `
-            <div class="row" id="chat${idMessage}>
+            <div class="row" id="chat${idMessage}">
                 <div class="left">
                     <div class="sender">${data.sender}</div>
                     <div class="grey chat">${data.message}</div>
