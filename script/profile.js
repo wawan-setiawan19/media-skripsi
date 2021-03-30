@@ -11,12 +11,12 @@ const getProfile = () => {
   showProfile(nama, foto, kelas, gaya_belajar, pretest, nama_kelompok);
 };
 
-const showProfile = (nama, foto, gaya_belajar, kelas, pretest) => {
+const showProfile = (nama, foto, gaya_belajar, kelas, pretest, nama_kelompok) => {
   nameElement.innerHTML = nama;
   profilePicture.setAttribute("src", foto);
   kelasElement.innerHTML = kelas;
   gayaBelajarElement.innerHTML = gaya_belajar;
-  nilaiPreTestElement.innerHTML = `Nilai Pretest ${pretest}`;
+  nilaiPreTestElement.innerHTML = `NILAI PRETEST ${pretest}`;
   kelompokElement.innerHTML = `KELOMPOK ${nama_kelompok}`
 };
 

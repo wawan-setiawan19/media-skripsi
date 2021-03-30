@@ -98,8 +98,8 @@ const loadHome = () => {
 
 const loadProfile = () => {
   getProfile();
+  // lihatKelompok();
   Form.getLogout();
-  lihatKelompok();
 };
 
 const loadToast = (message) => {

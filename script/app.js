@@ -1,4 +1,5 @@
 import { Navigasi, loadPage } from "./nav.js";
+import { lihatKelompok } from "./randomKelompok.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   firebaseAuth.onAuthStateChanged((user) => {
@@ -11,6 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
       Navigasi.loadBotNav();
       bodyElement.classList.remove("body-form");
       getUserProfile();
+      lihatKelompok();
       loadPage(page);
     } else {
       loadPage("form");
