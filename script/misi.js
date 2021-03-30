@@ -2,9 +2,11 @@ import { dataMateri } from "./materi.js";
 
 const getMateri = () => {
   const materiElement = document.querySelector("#daftarMateri");
-
+  let media = ''
   let dummy = '';
   dataMateri.forEach((element) => {
+    if(gaya_belajar === "Kinestetik") media = element.livecode;
+    if(gaya_belajar === "Visual") media = element.mediaMateri;
     dummy += `
       <li>
         <div class="collapsible-header gradient no-border guide-header">
@@ -13,7 +15,7 @@ const getMateri = () => {
         <div class="collapsible-body border-gradient">
           <div class="materi" id="pembukaan">${element.pembukaan}</div>
           <div class="definisi" id="definisiMateri">${element.materi}</div>
-          <div id="mediaMateri">${element.mediaMateri}</div>
+          <div id="mediaMateri">${media}</div>
         </div>
       </li>
     `;
