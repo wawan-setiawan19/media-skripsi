@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
             uid = user.uid;
             nama = user.displayName;
             email = user.email;
+            foto = user.photoURL;
             Navigasi.loadTopNav();
             Navigasi.loadBotNav();
             bodyElement.classList.remove("body-form");
@@ -25,10 +26,11 @@ const getUserProfile = () => {
         const data = user.val();
         if (data) {
             nama = data.displayName;
-            foto = data.photoURL;
+            // foto = data.photoURL;
             kelas = data.kelas;
             gaya_belajar = data.gaya_belajar;
             jenis_kelamin = data.jenis_kelamin;
+            absen = data.absen;
             pretest = data.pretest;
             postest = data.postest;
             if (foto == null) {

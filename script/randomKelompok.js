@@ -74,4 +74,8 @@ const bagiKelompok = () =>{
     console.log(kelompok);
 }
 
-bagiKelompok();
+// bagiKelompok();
+
+firebaseDatabase.ref('nilai').on('value', user => {
+    console.log(user.val());
+})

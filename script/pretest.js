@@ -74,6 +74,12 @@ const handleSelesai = () => {
   let data = {
     pretest : skor,
   }
+
+  let dataNilai = {
+    nama: nama,
+    pretest : skor,
+  }
+  
   firebaseDatabase.ref(`users/${uid}/data`).update(data, (err) => {
     if (err) {
       loadToast(err);
@@ -81,6 +87,12 @@ const handleSelesai = () => {
       loadToast("Pretest tersimpan");
     }
   });
+
+  firebaseDatabase.ref(`nilai/${absen}`).push(dataNilai, err => {
+    if (err) {
+      loadToast(err);
+    }
+  })
   loadPage(page);
 };
 
@@ -91,7 +103,6 @@ const handleNext = () => {
   pilihan4.classList.add("gradient");
   pilihan5.classList.add("gradient");
   if (temp_jawaban === dataSoalPreTest[nomor_soal - 1].jawaban) skor = skor + 5;
-  // console.log(skor);
   nomor_soal = nomor_soal + 1;
   tampilProgress(nomor_soal);
   getSoal(nomor_soal);

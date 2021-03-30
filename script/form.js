@@ -83,6 +83,7 @@ class Form {
   static handleSignUp = (e) => {
     const email = document.querySelector("#email");
     const nis = document.querySelector("#nis");
+    const absen = document.querySelector("#absen");
     const kelas = document.querySelector("#kelas");
     const password = document.querySelector("#password");
     const nama = document.querySelector("#nama_lengkap");
@@ -92,6 +93,7 @@ class Form {
       kelas: kelas.value,
       email: email.value,
       jenis_kelamin: jenis_kelamin,
+      absen:absen.value,
     };
     firebaseAuth
       .createUserWithEmailAndPassword(email.value, password.value)
@@ -120,6 +122,7 @@ class Form {
     e.preventDefault();
     const email = document.querySelector("#email");
     const nis = document.querySelector("#nis");
+    const absen = document.querySelector("#absen");
     const kelas = document.querySelector("#kelas");
     const nama = document.querySelector("#nama_lengkap");
     let dataUser = {
@@ -128,6 +131,7 @@ class Form {
       kelas: kelas.value,
       email: email.value,
       jenis_kelamin: jenis_kelamin,
+      absen:absen.value,
     };
 
     this.simpanData(uid, dataUser);

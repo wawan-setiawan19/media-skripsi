@@ -25,6 +25,7 @@ let uid = "";
 let email = "";
 let nama = "";
 let nis = "";
+let absen = '';
 let foto = "";
 let jenis_kelamin = "L";
 let gaya_belajar = "";
