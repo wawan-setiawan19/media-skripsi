@@ -88,7 +88,7 @@ const handleSelesai = () => {
     }
   });
 
-  firebaseDatabase.ref(`nilai/${absen}`).push(dataNilai, err => {
+  firebaseDatabase.ref(`nilai/${absen}/`).update(dataNilai, err => {
     if (err) {
       loadToast(err);
     }
