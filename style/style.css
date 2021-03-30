@@ -19,7 +19,8 @@ html {
 }
 
 body {
-    font-family: Condensed,;
+    font-family: Condensed;
+    font-display: swap;
 }
 
 .gradient {
@@ -28,7 +29,8 @@ body {
 }
 
 .goldman {
-    font-family: Goldman, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: Goldman, Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+    font-display: swap;
 }
 
 .bottom-navigation {
@@ -71,19 +73,19 @@ body {
     background-color: var(--background-color);
 }
 
-@media screen and (min-width:993px) {
+@media screen and (min-width: 993px) {
     .bottom-navigation {
         display: none;
     }
 }
 
-@media screen and (max-width:992px) {
+@media screen and (max-width: 992px) {
     .top-navigation {
         display: none;
     }
 }
 
-@media screen and (max-width:600px) {
+@media screen and (max-width: 600px) {
     .banner {
         height: 100vh;
     }
@@ -100,7 +102,6 @@ body {
 .text-change-container {
     padding-left: 20px;
 }
-
 
 .banner {
     background-color: var(--background-color);
@@ -150,7 +151,7 @@ body {
     color: white;
 }
 
-@media screen and (max-width:600px) {
+@media screen and (max-width: 600px) {
     .picture-container .row {
         padding: 2% 0;
     }
@@ -161,7 +162,7 @@ body {
     background-color: var(--background-color);
 }
 
-@media screen and (min-width:1200px) {
+@media screen and (min-width: 1200px) {
     .nav-content {
         margin: 60px 0 0 0;
     }
