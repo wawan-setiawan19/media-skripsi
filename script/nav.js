@@ -8,6 +8,7 @@ import { getProfile } from "./profile.js";
 import { cekTest } from "./test.js";
 import { getMateri } from "./misi.js";
 import { lihatKelompok } from "./randomKelompok.js";
+import { getButtonChat } from "./chat.js";
 
 // let page = getUrl[0];
 class Navigasi {
@@ -98,7 +99,6 @@ const loadHome = () => {
 
 const loadProfile = () => {
   getProfile();
-  // lihatKelompok();
   Form.getLogout();
 };
 
@@ -114,6 +114,7 @@ const cekPreTest = () => {
     loadPage("pre-test");
   } else {
     getMateri();
+    getButtonChat();
   }
 };
 

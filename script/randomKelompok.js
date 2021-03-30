@@ -67,9 +67,7 @@ const lihatKelompok = () => {
 };
 
 const cetakAnggota = () => {
-    console.log(nama);
     for (let i = 0; i < kelompok.length; i++) {
-        console.log(kelompok[i]);
         if (nama == kelompok[i].anggota1.nama) nama_kelompok = i + 1;
         if (nama == kelompok[i].anggota2.nama) nama_kelompok = i + 1;
         if (nama == kelompok[i].anggota3.nama) nama_kelompok = i + 1;
