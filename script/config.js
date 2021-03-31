@@ -35,6 +35,7 @@ let visual = 0;
 let audio = 0;
 let kinestetik = 0;
 let nama_kelompok = 0;
+let kelompokSaya;
 
 jk = (value) => {
   jenis_kelamin = value;

@@ -5,8 +5,8 @@ const getMateri = () => {
   let media = ''
   let dummy = '';
   dataMateri.forEach((element) => {
-    if(gaya_belajar === "Kinestetik") media = element.livecode;
-    if(gaya_belajar === "Visual") media = element.mediaMateri;
+    // if(gaya_belajar === "Kinestetik") media = element.livecode;
+    media = element.mediaMateri;
     dummy += `
       <li>
         <div class="collapsible-header gradient no-border guide-header">

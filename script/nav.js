@@ -7,8 +7,8 @@ import { getButtonPost } from "./posttest.js";
 import { getProfile } from "./profile.js";
 import { cekTest } from "./test.js";
 import { getMateri } from "./misi.js";
-import { lihatKelompok } from "./randomKelompok.js";
 import { getButtonChat } from "./chat.js";
+import { showAnggota } from "./lkpd.js";
 
 // let page = getUrl[0];
 class Navigasi {
@@ -77,7 +77,7 @@ const loadPage = (page) => {
         if (page === "test-vak") cekTest();
         if (page === "lengkapi-data") Form.getButtonLengkapiData();
         if (page === "pre-test") getButton();
-        if (page === 'post-test') getButtonPost();
+        if (page === "post-test") getButtonPost();
         M.AutoInit();
       } else if (xmlHttp.status === 404) {
         loadPage("404");
@@ -115,6 +115,7 @@ const cekPreTest = () => {
   } else {
     getMateri();
     getButtonChat();
+    showAnggota(kelompokSaya);
   }
 };
 

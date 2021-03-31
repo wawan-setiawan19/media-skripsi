@@ -13,7 +13,6 @@ document.addEventListener("DOMContentLoaded", () => {
       bodyElement.classList.remove("body-form");
       getUserProfile();
       lihatKelompok();
-      loadPage(page);
     } else {
       loadPage("form");
       Navigasi.loadFormNav();

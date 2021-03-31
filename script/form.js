@@ -10,6 +10,9 @@ class Form {
     btnLogin.addEventListener("click", this.handleLogin);
     btnLoginGoogle.addEventListener("click", this.handleLoginGoogle);
     btnSignUp.addEventListener("click", this.handleSignUp);
+    passwordLogin.addEventListener("keyup", (e) => {
+      if (e.keyCode == 13) this.handleLogin(event);
+    });
 
     const toogleIconLogin = document.querySelector("#iconPasswordLogin");
     const toogleIconSignUp = document.querySelector("#iconPasswordSignUp");
@@ -47,7 +50,7 @@ class Form {
     firebaseAuth
       .signInWithEmailAndPassword(email.value, password.value)
       .then((user) => {
-        loadToast(`Selamat datang ${nama}`);
+        loadToast("SELAMAT DATANG AGEN");
         page = "home";
       })
       .catch((err) => {
@@ -61,7 +64,7 @@ class Form {
     firebaseAuth
       .signInWithPopup(googleProvider)
       .then((user) => {
-        loadToast(`selamat datang ${nama}`);
+        loadToast("SELAMAT DATANG AGEN");
       })
       .catch((err) => {
         console.error(err);
@@ -93,7 +96,7 @@ class Form {
       kelas: kelas.value,
       email: email.value,
       jenis_kelamin: jenis_kelamin,
-      absen:absen.value,
+      absen: absen.value,
     };
     firebaseAuth
       .createUserWithEmailAndPassword(email.value, password.value)
@@ -131,7 +134,7 @@ class Form {
       kelas: kelas.value,
       email: email.value,
       jenis_kelamin: jenis_kelamin,
-      absen:absen.value,
+      absen: absen.value,
     };
 
     this.simpanData(uid, dataUser);
