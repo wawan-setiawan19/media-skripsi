@@ -21,8 +21,14 @@ workbox.precaching.precacheAndRoute(
     { url: "/assets/icons/icons-512.png", revision: "1" },
     { url: "/assets/icons/icons-96.png", revision: "1" },
     { url: "/assets/icons/icons-72.png", revision: "1" },
-    { url: "/assets/image/materi/flowchart-bersarang-kasus.jpg", revision: "1" },
-    { url: "/assets/image/materi/flowchart-if-else-if-kasus.svg", revision: "1" },
+    {
+      url: "/assets/image/materi/flowchart-bersarang-kasus.jpg",
+      revision: "1",
+    },
+    {
+      url: "/assets/image/materi/flowchart-if-else-if-kasus.svg",
+      revision: "1",
+    },
     { url: "/assets/image/materi/flowchart-if-else.png", revision: "1" },
     { url: "/assets/image/materi/flowchart-if-else-if.png", revision: "1" },
     { url: "/assets/image/materi/flowchart-percabangan-if.jpg", revision: "1" },
@@ -73,8 +79,8 @@ workbox.precaching.precacheAndRoute(
     { url: "/style/materialize.min.css", revision: "1" },
     { url: "/style/style.css", revision: "1" },
     { url: "/index.html", revision: "1" },
-    { url: "/manifest.json", revision: "1" },
-    { url: "/service-worker.js", revision: "1" },
+    { url: "/manifest.json", revision: "2" },
+    { url: "/service-worker.js", revision: "2" },
   ],
   {
     ignoreUrlParamatersMatching: [/.*/],
