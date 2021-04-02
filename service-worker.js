@@ -74,7 +74,7 @@ workbox.precaching.precacheAndRoute(
         { url: "/style/style.css", revision: "1" },
         { url: "/index.html", revision: "1" },
         { url: "/manifest.json", revision: "7" },
-        { url: "/service-worker.js", revision: "19" },
+        { url: "/service-worker.js", revision: "18" },
     ],
     {
         ignoreUrlParamatersMatching: [/.*/],
