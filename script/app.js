@@ -1,4 +1,5 @@
 import { Navigasi, loadPage } from "./nav.js";
+import { requestPermission } from "./notification.js";
 import { lihatKelompok } from "./randomKelompok.js";
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -12,6 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
       Navigasi.loadBotNav();
       bodyElement.classList.remove("body-form");
       getUserProfile();
+      requestPermission();
       lihatKelompok();
     } else {
       loadPage("form");
