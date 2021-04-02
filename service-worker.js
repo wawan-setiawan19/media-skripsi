@@ -55,7 +55,7 @@ workbox.precaching.precacheAndRoute(
         { url: "/script/app.js", revision: "3" },
         { url: "/script/chat.js", revision: "1" },
         { url: "/script/config.js", revision: "1" },
-        { url: "/script/form.js", revision: "4" },
+        { url: "/script/form.js", revision: "5" },
         { url: "/script/guides.js", revision: "1" },
         { url: "/script/lkpd.js", revision: "1" },
         { url: "/script/materi.js", revision: "1" },
@@ -74,7 +74,7 @@ workbox.precaching.precacheAndRoute(
         { url: "/style/style.css", revision: "1" },
         { url: "/index.html", revision: "1" },
         { url: "/manifest.json", revision: "7" },
-        { url: "/service-worker.js", revision: "24" },
+        { url: "/service-worker.js", revision: "25" },
     ],
     {
         ignoreUrlParamatersMatching: [/.*/],
