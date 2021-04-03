@@ -33,6 +33,7 @@ let kelas = "";
 let lkpd = true;
 let pretest = 0;
 let postest = 0;
+let peningkatan = 0;
 let visual = 0;
 let audio = 0;
 let kinestetik = 0;
