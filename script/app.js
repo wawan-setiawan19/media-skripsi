@@ -38,7 +38,6 @@ const getUserProfile = () => {
             postest = data.postest;
             if (lkpd == undefined) lkpd = false;
             if (postest == undefined) postest = 0;
-            if (pretest == undefined) pretest = 0;
             if (foto == null) {
                 if (jenis_kelamin === "L") {
                     foto = "./assets/image/profile/l.svg";
