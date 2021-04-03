@@ -14,7 +14,6 @@ document.addEventListener("DOMContentLoaded", () => {
             bodyElement.classList.remove("body-form");
             getUserProfile();
             requestPermission();
-            lihatKelompok();
         } else {
             loadPage("form");
             Navigasi.loadFormNav();
@@ -36,6 +35,7 @@ const getUserProfile = () => {
             lkpd = data.LKPD;
             pretest = data.pretest;
             postest = data.postest;
+            if(pretest !== undefined) lihatKelompok();
             if (lkpd == undefined) lkpd = false;
             if (postest == undefined) postest = 0;
             if (foto == null) {
