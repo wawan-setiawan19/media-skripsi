@@ -12,6 +12,7 @@ firebase.initializeApp(firebaseConfig)
 
 const firebaseDatabase = firebase.database();
 const firebaseAuth = firebase.auth();
+const firrbaseStorage = firebase.storage();
 const googleProvider = new firebase.auth.GoogleAuthProvider();
 
 const botNavElement = document.querySelector("#bottomNav");
@@ -29,6 +30,7 @@ let foto = "";
 let jenis_kelamin = "L";
 let gaya_belajar = "";
 let kelas = "";
+let lkpd = true;
 let pretest = 0;
 let postest = 0;
 let visual = 0;

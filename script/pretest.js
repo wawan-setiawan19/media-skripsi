@@ -1,5 +1,6 @@
 import { loadPage, loadToast } from "./nav.js";
 import { showNotifikasiBadge } from "./notification.js";
+import { lihatKelompok } from "./randomKelompok.js";
 import { dataSoalPreTest } from "./soal.js";
 let nomor_soal = 1;
 let pilihan1, pilihan2, pilihan3, pilihan4, pilihan5;
@@ -95,6 +96,7 @@ const handleSelesai = () => {
         }
     });
     loadPage(page);
+    lihatKelompok();
     showNotifikasiBadge(
         "Belajar Berhadiah",
         "Dapatkan kesempatan mendapat hadiah uang tunai langsung"

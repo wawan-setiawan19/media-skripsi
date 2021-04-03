@@ -29,7 +29,7 @@ const dataMateri = [
         mediaMateri:
             '<img src="./assets/image/materi/percabangan-if.jpg"alt=""class="responsive-img"/>',
         livecode:
-            '<div>Live Coding</div><iframe height="500px" width="100%" src="https://replit.com/@wsettiawan/percabangan?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>',
+            '',
     },
     {
         id: 4,

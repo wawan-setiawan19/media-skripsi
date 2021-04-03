@@ -2,10 +2,11 @@ import { dataMateri } from "./materi.js";
 
 const getMateri = () => {
   const materiElement = document.querySelector("#daftarMateri");
+  const livecode = document.querySelector(".livecode");
   let media = ''
   let dummy = '';
   dataMateri.forEach((element) => {
-    // if(gaya_belajar === "Kinestetik") media = element.livecode;
+    if(gaya_belajar === "Kinestetik") livecode.classList.remove('hide');
     media = element.mediaMateri;
     dummy += `
       <li>

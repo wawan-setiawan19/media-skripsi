@@ -33,8 +33,11 @@ const getUserProfile = () => {
       gaya_belajar = data.gaya_belajar;
       jenis_kelamin = data.jenis_kelamin;
       absen = data.absen;
+      lkpd = data.LKPD;
       pretest = data.pretest;
       postest = data.postest;
+      console.log(data);
+      if (lkpd == undefined) lkpd = false;
       if (foto == null) {
         if (jenis_kelamin === "L") {
           foto = "./assets/image/profile/l.svg";
