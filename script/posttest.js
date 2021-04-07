@@ -1,3 +1,4 @@
+import { loadPage } from "./nav.js";
 import { dataSoalPostTest } from "./soal.js";
 let nomor_soal = 1;
 let pilihan1, pilihan2, pilihan3, pilihan4, pilihan5;
@@ -62,8 +63,34 @@ const showSoal = (nomor) => {
 };
 
 const handleSelesai = () => {
-    boxElement.classList.remove("hide");
-    boxElement.innerHTML = `<h2>${skor}</h2>`;
+    let nilaiKelompok;
+
+    postest = skor;
+    let data = {
+        postest: skor,
+    };
+
+    peningkatan = postest - pretest;
+
+    if (peningkatan < -10) nilaiKelompok = 0;
+    if (peningkatan < 0) nilaiKelompok = 10;
+    if (peningkatan <= 10) nilaiKelompok = 20;
+    if (peningkatan > 10 || postest == 100) nilaiKelompok = 30;
+
+    let skorKelompok = {
+        nilai: nilaiKelompok,
+    };
+
+    firebaseDatabase.ref(`users/${uid}/data`).update(data, (err) => {
+        if (err) {
+            loadToast(err);
+        } else {
+            loadToast("postest tersimpan");
+        }
+    });
+
+    firebaseDatabase.ref(`kelompok/${nama_kelompok}/${nama}`).update(skorKelompok, (err) => {});
+    loadPage(page);
 };
 
 const handleNext = () => {
