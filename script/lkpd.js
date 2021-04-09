@@ -14,6 +14,7 @@ const showAnggota = (kelompokSaya) => {
     const uploadBtn = document.querySelector(".upload");
     file = document.querySelector(".file");
     let dummyAnggota = "";
+    console.log(kelompokSaya);
     kelompokSaya.forEach((element) => {
         if (element) {
             dummyAnggota += `<li>${element}</li>`;

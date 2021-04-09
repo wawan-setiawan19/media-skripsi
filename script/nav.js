@@ -10,17 +10,16 @@ import { getMateri } from "./misi.js";
 import { getButtonChat } from "./chat.js";
 import { showAnggota } from "./lkpd.js";
 
-// let page = getUrl[0];
 class Navigasi {
   static loadBotNav = () => {
     const xhr = new XMLHttpRequest();
 
     xhr.onreadystatechange = () => {
       if (xhr.readyState === 4) {
-        // if (xhr.status !== 200) return;
         if (xhr.status === 200) {
           botNavElement.innerHTML = xhr.responseText;
           Menu.getBottomButton();
+          Form.getMobileLogout();
         }
       }
     };
@@ -52,6 +51,7 @@ class Navigasi {
         if (xhr.status === 200) {
           topNavElement.innerHTML = xhr.responseText;
           Menu.getTopButton();
+          Form.getLogout();
         }
       }
     };

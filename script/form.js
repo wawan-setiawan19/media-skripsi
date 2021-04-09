@@ -43,6 +43,10 @@ class Form {
         const btnLogout = document.querySelector("#btnLogout");
         btnLogout.addEventListener("click", this.handleLogout);
     };
+    static getMobileLogout = () => {
+        const btnLogout = document.querySelector("#btnMobileLogout");
+        btnLogout.addEventListener("click", this.handleLogout);
+    };
 
     static handleLogin = (e) => {
         const email = document.querySelector("#email_login");

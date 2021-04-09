@@ -37,7 +37,7 @@ const getAllGuides = () => {
         dataGuide += `
                 <li>
                         <div class="collapsible-header gradient no-border guide-header">
-                            <div class="goldman">${element.judul_panduan}</div>
+                            <div class="condensed">${element.judul_panduan}</div>
                         </div>
                         <div class="collapsible-body border-gradient">
                             <p>${element.deskripsi}</p>

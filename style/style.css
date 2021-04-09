@@ -9,7 +9,8 @@
 }
 
 :root {
-    --gradient: -webkit-linear-gradient(-70deg, #9d9ff8, #2160a8);
+    --gradient: -webkit-linear-gradient(-70deg, #040d21, #2160a8);
+    --gradient-text: -webkit-linear-gradient(-70deg, #e2eafa, #a6cfff);
     --background-color: #040d21;
 }
 
@@ -114,7 +115,7 @@ body {
 
 .stad {
     -webkit-text-fill-color: transparent;
-    background: var(--gradient);
+    background: var(--gradient-text);
     -webkit-background-clip: text;
     background-clip: text;
     font-size: 3rem;
@@ -176,4 +177,9 @@ body {
 
 .white-text {
     color: white;
+}
+
+.row h2{
+    font-size: 40px;
+    font-weight: bold;
 }
