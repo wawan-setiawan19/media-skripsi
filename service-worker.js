@@ -74,9 +74,9 @@ workbox.precaching.precacheAndRoute(
     { url: "/script/test.js", revision: "1" },
     { url: "/style/materialize.min.css", revision: "1" },
     { url: "/style/style.css", revision: "1" },
-    { url: "/index.html", revision: "1" },
+    { url: "/index.html", revision: "2" },
     { url: "/manifest.json", revision: "2" },
-    { url: "/service-worker.js", revision: "2" },
+    { url: "/service-worker.js", revision: "3" },
   ],
   {
     ignoreUrlParamatersMatching: [/.*/],
