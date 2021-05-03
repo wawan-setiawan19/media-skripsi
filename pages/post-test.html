@@ -85,6 +85,16 @@
   .choose {
     background-color: teal;
   }
+
+  .timer{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    font-size: 32px;
+    display: inline-block;
+    color:white;
+    border-radius: 5px;
+  }
 </style>
 
 <div class="misi-container">
@@ -99,17 +109,18 @@
     <div class="btn gradient" id="hideBtn">DAPATKAN NILAI POST TEST</div>
   </div>
   <div class="countdown"></div>
+  <div class="timer gradient hide right ">00:00</div>
   <div class="soalContainer hide">
     <div class="progress">
-      <div class="determinate gradient" id="progressBar">1/10</div>
+      <div class="determinate gradient" id="progressBar">1/20</div>
     </div>
-    <div class="col s12 pertanyaan">Contoh Soal</div>
-    <div class="col s12 choices choose gradient" id="pilihan1">Pilihan 1</div>
-    <div class="col s12 choices choose gradient" id="pilihan2">Pilihan 2</div>
-    <div class="col s12 choices choose gradient" id="pilihan3">Pilihan 3</div>
-    <div class="col s12 choices choose gradient" id="pilihan4">Pilihan 4</div>
-    <div class="col s12 choices choose gradient" id="pilihan5">Pilihan 5</div>
-    <div class="col s12 btn btn-next" id="next">Soal Berikutnya</div>
+    <div class="pertanyaan">Contoh Soal</div>
+    <div class="choices choose gradient" id="pilihan1">Pilihan 1</div>
+    <div class="choices choose gradient" id="pilihan2">Pilihan 2</div>
+    <div class="choices choose gradient" id="pilihan3">Pilihan 3</div>
+    <div class="choices choose gradient" id="pilihan4">Pilihan 4</div>
+    <div class="choices choose gradient" id="pilihan5">Pilihan 5</div>
+    <div class="btn btn-next" id="next">Soal Berikutnya</div>
   </div>
-  <div class="col s12 btn btn-next hide" id="selesai">Selesai</div>
+  <div class="btn btn-next hide" id="selesai">Selesai</div>
 </div>

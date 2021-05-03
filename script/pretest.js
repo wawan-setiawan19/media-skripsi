@@ -2,6 +2,7 @@ import { loadPage, loadToast } from "./nav.js";
 import { showNotifikasiBadge } from "./notification.js";
 import { lihatKelompok } from "./randomKelompok.js";
 import { dataSoalPreTest } from "./soal.js";
+import { getTimer, hideTimer } from "./timer.js";
 let nomor_soal = 1;
 let pilihan1, pilihan2, pilihan3, pilihan4, pilihan5;
 let soalContainerElement, boxElement, countdownElement;
@@ -24,6 +25,7 @@ const getButton = () => {
                 countdownElement.classList.add("hide");
                 soalContainerElement.classList.remove("hide");
                 getSoal(nomor_soal);
+                getTimer("pre", 10);
             }
         }, 1000);
     });
@@ -47,11 +49,11 @@ const showSoal = (nomor) => {
         btnNext.classList.add("hide");
         btnSelesai.classList.remove("hide");
         boxElement.classList.remove("hide");
-        console.log(skor);
+        hideTimer();
         boxElement.innerHTML = `
-    <div style="text-align:center;">Nilai kamu</div>
-    <div class="angka-countdown">${skor}</div>
-    <div class="message">Kamu sudah selesai tes, kamu klik selesai dan data akan tersimpan</div>`;
+            <div style="text-align:center;">Nilai kamu</div>
+            <div class="angka-countdown">${skor}</div>
+            <div class="message">Kamu sudah selesai tes, kamu klik selesai dan data akan tersimpan</div>`;
         soalContainerElement.classList.add("hide");
     } else {
         soal.innerHTML = `${dataSoalPreTest[nomor - 1].soal}`;
@@ -62,7 +64,7 @@ const showSoal = (nomor) => {
         pilihan5.innerHTML = `${dataSoalPreTest[nomor - 1].pilihan5}`;
 
         btnNext.addEventListener("click", handleNext);
-        btnSelesai.addEventListener("click", handleSelesai);
+        btnSelesai.addEventListener("click", handleSelesaiPre);
         pilihan1.addEventListener("click", handlePilihan1);
         pilihan2.addEventListener("click", handlePilihan2);
         pilihan3.addEventListener("click", handlePilihan3);
@@ -71,7 +73,7 @@ const showSoal = (nomor) => {
     }
 };
 
-const handleSelesai = () => {
+const handleSelesaiPre = () => {
     pretest = skor;
     let data = {
         pretest: skor,
@@ -167,4 +169,4 @@ const tampilProgress = (progress) => {
     }
 };
 
-export { getButton };
+export { getButton, handleSelesaiPre };

@@ -9,7 +9,10 @@
         <link rel="manifest" href="./manifest.json" />
         <link rel="apple-touch-icon" href="./assets/icons/icons-192.png" />
         <meta name="theme-color" content="#040d21" />
-        <meta name="google-site-verification" content="B-cO-PR13I-Y_U1Q-hwn_vU474kfBPlVfcxcneMvbjs" />
+        <meta
+            name="google-site-verification"
+            content="B-cO-PR13I-Y_U1Q-hwn_vU474kfBPlVfcxcneMvbjs"
+        />
         <link rel="shortcut icon" href="./assets/icons/favicon.png" type="image/x-icon" />
         <link
             rel="preload"
@@ -49,20 +52,20 @@
         <script src="./script/config.js"></script>
         <script src="./script/app.js" type="module"></script>
         <script>
-            // if ("serviceWorker" in navigator) {
-            //     window.addEventListener("load", () => {
-            //         navigator.serviceWorker
-            //             .register("/service-worker.js")
-            //             .then(() => {
-            //                 console.log("SW done");
-            //             })
-            //             .catch((err) => {
-            //                 console.error(err);
-            //             });
-            //     });
-            // } else {
-            //     console.warn("SW Not Support in Browser");
-            // }
+            if ("serviceWorker" in navigator) {
+                window.addEventListener("load", () => {
+                    navigator.serviceWorker
+                        .register("/serviceWorker.js")
+                        .then(() => {
+                            console.log("SW done");
+                        })
+                        .catch((err) => {
+                            console.error(err);
+                        });
+                });
+            } else {
+                console.warn("SW Not Support in Browser");
+            }
         </script>
     </body>
 </html>

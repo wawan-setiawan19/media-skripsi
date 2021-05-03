@@ -1,118 +1,128 @@
 <style>
-  h1 {
-    color: white;
-  }
-  .misi-container {
-    height: 15vh;
-    background: var(--background-color);
-    padding: 10px;
-    overflow: hidden;
-  }
-
-  .misi-container .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .title-misi {
-    margin: 0;
-    font-size: 30px;
-  }
-
-  .misi-img {
-    height: 15vh;
-  }
-
-  @media screen and (min-width: 1200px) {
-    .misi-container {
-      padding-top: 10vh;
-      height: 20vh;
+    h1 {
+        color: white;
     }
-  }
+    .misi-container {
+        height: 15vh;
+        background: var(--background-color);
+        padding: 10px;
+        overflow: hidden;
+    }
 
-  .message {
-    color: black;
-    font-size: 30px;
-    margin-bottom: 20px;
-    margin-top: 20px;
-  }
+    .misi-container .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 
-  .angka-countdown {
-    text-align: center;
-    font-size: 50vh;
-    line-height: 50vh;
-  }
+    .title-misi {
+        margin: 0;
+        font-size: 30px;
+    }
 
-  .choices {
-    margin-top: 20px;
-    padding: 10px 20px;
-    border-radius: 30px;
-    color: white;
-  }
+    .misi-img {
+        height: 15vh;
+    }
 
-  .pertanyaan {
-    margin-top: 10px;
-  }
+    @media screen and (min-width: 1200px) {
+        .misi-container {
+            padding-top: 10vh;
+            height: 20vh;
+        }
+    }
 
-  .btn-next {
-    margin-top: 30px;
-    margin-left: auto;
-    margin-bottom: 70px;
-    border-radius: 30px;
-  }
+    .message {
+        color: black;
+        font-size: 30px;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
 
-  pre {
-    tab-size: 2;
-  }
+    .angka-countdown {
+        text-align: center;
+        font-size: 50vh;
+        line-height: 50vh;
+    }
 
-  .determinate {
-    border-radius: 20px;
-  }
+    .choices {
+        margin-top: 20px;
+        padding: 10px 20px;
+        border-radius: 30px;
+        color: white;
+    }
 
-  .progress {
-    color: white;
-    padding: 10px 0;
-    text-align: center;
-    margin-top: 20px;
-    border-radius: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  }
+    .pertanyaan {
+        margin-top: 10px;
+    }
 
-  .soalContainer{
-    margin-bottom: 70px;
-  }
+    .btn-next {
+        margin-top: 30px;
+        margin-left: auto;
+        margin-bottom: 70px;
+        border-radius: 30px;
+    }
 
-  .choose {
-    background-color: teal;
-  }
+    pre {
+        tab-size: 2;
+    }
+
+    .determinate {
+        border-radius: 20px;
+    }
+
+    .progress {
+        color: white;
+        padding: 10px 0;
+        text-align: center;
+        margin-top: 20px;
+        border-radius: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .soalContainer {
+        margin-bottom: 70px;
+    }
+
+    .choose {
+        background-color: teal;
+    }
+    .timer {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        padding: 10px 20px;
+        font-size: 32px;
+        display: inline-block;
+        color: white;
+        border-radius: 5px;
+    }
 </style>
 
 <div class="misi-container">
-  <div class="container">
-    <h1 class="title-misi">Pre Test</h1>
-    <img src="../assets/image/misi.png" alt="" srcset="" class="misi-img" />
-  </div>
+    <div class="container">
+        <h1 class="title-misi">Pre Test</h1>
+        <img src="../assets/image/misi.png" alt="" srcset="" class="misi-img" />
+    </div>
 </div>
 <div class="container">
-  <div class="box-dialog-container">
-    <div class="message">Belum ada nilai pretest ya?</div>
-    <div class="btn gradient" id="hideBtn">DAPATKAN NILAI PRE TEST</div>
-  </div>
-  <div class="countdown"></div>
-  <div class="soalContainer hide">
-    <div class="progress">
-      <div class="determinate gradient" id="progressBar">1/10</div>
+    <div class="box-dialog-container">
+        <div class="message">Belum ada nilai pretest ya?</div>
+        <div class="btn gradient" id="hideBtn">DAPATKAN NILAI PRE TEST</div>
     </div>
-    <div class="col s12 pertanyaan">Contoh Soal</div>
-    <div class="col s12 choices choose gradient" id="pilihan1">Pilihan 1</div>
-    <div class="col s12 choices choose gradient" id="pilihan2">Pilihan 2</div>
-    <div class="col s12 choices choose gradient" id="pilihan3">Pilihan 3</div>
-    <div class="col s12 choices choose gradient" id="pilihan4">Pilihan 4</div>
-    <div class="col s12 choices choose gradient" id="pilihan5">Pilihan 5</div>
-    <div class="col s12 btn btn-next" id="next">Soal Berikutnya</div>
-  </div>
-  <div class="row">
-    <div class="col s12 btn btn-next hide" id="selesai">Selesai</div>
-  </div>
+    <div class="countdown"></div>
+    <div class="timer gradient hide right">00:00</div>
+    <div class="soalContainer hide">
+        <div class="progress">
+            <div class="determinate gradient" id="progressBar">1/20</div>
+        </div>
+        <div class="col s12 pertanyaan">Contoh Soal</div>
+        <div class="col s12 choices choose gradient" id="pilihan1">Pilihan 1</div>
+        <div class="col s12 choices choose gradient" id="pilihan2">Pilihan 2</div>
+        <div class="col s12 choices choose gradient" id="pilihan3">Pilihan 3</div>
+        <div class="col s12 choices choose gradient" id="pilihan4">Pilihan 4</div>
+        <div class="col s12 choices choose gradient" id="pilihan5">Pilihan 5</div>
+        <div class="col s12 btn btn-next" id="next">Soal Berikutnya</div>
+    </div>
+    <div class="row">
+        <div class="col s12 btn btn-next hide" id="selesai">Selesai</div>
+    </div>
 </div>

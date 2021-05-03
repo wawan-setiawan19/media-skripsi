@@ -1,15 +1,19 @@
 import { loadPage } from "./nav.js";
 import { dataSoalPostTest } from "./soal.js";
+import { getTimer } from "./timer.js";
+
 let nomor_soal = 1;
 let pilihan1, pilihan2, pilihan3, pilihan4, pilihan5;
 let soalContainerElement, boxElement;
 let temp_jawaban = "";
 let skor = 0;
 const getButtonPost = () => {
-    boxElement = document.querySelector(".box-dialog-container");
     const countdownElement = document.querySelector(".countdown");
-    soalContainerElement = document.querySelector(".soalContainer");
     const btnHide = document.querySelector("#hideBtn");
+
+    boxElement = document.querySelector(".box-dialog-container");
+    soalContainerElement = document.querySelector(".soalContainer");
+
     btnHide.addEventListener("click", () => {
         boxElement.classList.add("hide");
         let angka = 3;
@@ -21,6 +25,7 @@ const getButtonPost = () => {
                 countdownElement.classList.add("hide");
                 soalContainerElement.classList.remove("hide");
                 getSoal(nomor_soal);
+                getTimer('post',20);
             }
         }, 1000);
     });
@@ -90,7 +95,7 @@ const handleSelesai = () => {
     });
 
     firebaseDatabase.ref(`kelompok/${nama_kelompok}/${nama}`).update(skorKelompok, (err) => {});
-    loadPage(page);
+    loadPage('profile');
 };
 
 const handleNext = () => {
@@ -158,4 +163,4 @@ const tampilProgress = (progress) => {
     }
 };
 
-export { getButtonPost };
+export { getButtonPost, handleSelesai };
