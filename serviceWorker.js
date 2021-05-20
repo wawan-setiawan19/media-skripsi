@@ -48,7 +48,7 @@ workbox.precaching.precacheAndRoute(
     { url: "/pages/404.html", revision: "1" },
     { url: "/pages/form.html", revision: "1" },
     { url: "/pages/home.html", revision: "1" },
-    { url: "/pages/lengkapi-data.html", revision: "1" },
+    { url: "/pages/lengkapi-data.html", revision: "2" },
     { url: "/pages/missions.html", revision: "1" },
     { url: "/pages/post-test.html", revision: "2" },
     { url: "/pages/pre-test.html", revision: "2" },
@@ -77,7 +77,7 @@ workbox.precaching.precacheAndRoute(
     { url: "/style/style.css", revision: "1" },
     { url: "/index.html", revision: "3" },
     { url: "/manifest.json", revision: "4" },
-    { url: "/serviceWorker.js", revision: "6" },
+    { url: "/serviceWorker.js", revision: "7" },
   ],
   {
     ignoreUrlParamatersMatching: [/.*/],
