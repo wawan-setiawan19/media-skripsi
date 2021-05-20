@@ -6,8 +6,9 @@ const getMateri = () => {
   let media = ''
   let dummy = '';
   dataMateri.forEach((element) => {
-    if(gaya_belajar === "Kinestetik") livecode.classList.remove('hide');
-    media = element.mediaMateri;
+    if (gaya_belajar === "Kinestetik") livecode.classList.remove('hide');
+    if (gaya_belajar === "Visual") media = element.mediaMateri;
+    if (gaya_belajar === "Audio") media = element.videoMateri;
     dummy += `
       <li>
         <div class="collapsible-header gradient no-border guide-header">
